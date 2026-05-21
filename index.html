@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kayla Rockett · Las Vegas swimwear, lingerie & fashion model</title>
+<meta name="description" content="Kayla Rockett is a Las Vegas based swimwear, lingerie and fashion model. Available for campaigns, editorial, appearances and hosting. Booking: contact@kaylarockett.com" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Kayla Rockett · Las Vegas swimwear, lingerie & fashion model" />
+<meta property="og:description" content="Las Vegas based. Swimwear, lingerie and fashion. Booking: contact@kaylarockett.com" />
+<meta property="og:image" content="https://kaylarockett.com/images/hero.jpg" />
+<link rel="canonical" href="https://kaylarockett.com/" />
+<meta property="og:url" content="https://kaylarockett.com/" />
+<meta property="og:site_name" content="Kayla Rockett" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:image:width" content="2600" />
+<meta property="og:image:height" content="1733" />
+<meta property="og:image:alt" content="Kayla Rockett, Las Vegas swimwear and lingerie model" />
+<meta name="twitter:image:alt" content="Kayla Rockett, Las Vegas swimwear and lingerie model" />
+<meta name="twitter:site" content="@kaylarocketts_world" />
+<meta name="author" content="Kayla Rockett" />
+<meta name="theme-color" content="#0b0b0b" />
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" fill="%230b0b0b"/><text x="50%25" y="68%25" text-anchor="middle" font-family="Georgia,serif" font-size="22" fill="%23ff3d86" font-weight="700">K</text></svg>' />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#0a0a0b;
+    --bg-2:#141416;
+    --surface:#1a1a1d;
+    --line:rgba(255,255,255,.08);
+    --text:#f5f2ec;
+    --muted:#a39d92;
+    --gold:#d9b370;
+    --gold-2:#b8893f;
+    --maxw:1240px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-family:"Playfair Display",Georgia,serif;font-weight:700;line-height:1.08;letter-spacing:-.01em}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .eyebrow{
+    font-size:12px;letter-spacing:.32em;text-transform:uppercase;
+    color:var(--gold);font-weight:600;margin-bottom:18px;
+  }
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:14px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+    padding:16px 30px;border-radius:2px;cursor:pointer;border:1px solid transparent;
+    transition:transform .25s ease,background .25s ease,color .25s ease,border-color .25s ease;
+  }
+  .btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#16120a}
+  .btn-gold:hover{transform:translateY(-2px)}
+  .btn-ghost{border-color:rgba(255,255,255,.35);color:var(--text)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+
+  /* NAV */
+  header.nav{
+    position:fixed;top:0;left:0;right:0;z-index:60;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:22px 28px;transition:background .35s ease,padding .35s ease,backdrop-filter .35s ease;
+  }
+  header.nav.scrolled{background:rgba(10,10,11,.86);backdrop-filter:blur(14px);padding:14px 28px;border-bottom:1px solid var(--line)}
+  .brand{font-family:"Playfair Display",serif;font-weight:700;font-size:20px;letter-spacing:.22em;text-transform:uppercase}
+  .brand span{color:var(--gold)}
+  nav.links{display:flex;align-items:center;gap:34px}
+  nav.links a{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);transition:color .2s}
+  nav.links a:hover{color:var(--text)}
+  nav.links .btn{padding:11px 22px}
+  .menu-toggle{display:none;background:none;border:0;color:var(--text);cursor:pointer;flex-direction:column;gap:5px;padding:8px;position:relative;z-index:70}
+  .menu-toggle span{width:26px;height:2px;background:var(--text);border-radius:2px;transition:.3s}
+  .nav-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.55);opacity:0;visibility:hidden;transition:opacity .4s ease,visibility .4s ease;z-index:55}
+  .nav-backdrop.open{opacity:1;visibility:visible}
+
+  /* HERO */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;z-index:0}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 32%}
+  .hero-bg::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(0deg,rgba(8,8,9,.95) 0%,rgba(8,8,9,.72) 20%,rgba(8,8,9,.16) 46%,rgba(8,8,9,.05) 68%,rgba(8,8,9,.5) 100%)}
+  .hero-inner{position:relative;z-index:2;width:100%;padding-bottom:clamp(34px,5vh,72px)}
+  .hero h1{font-size:clamp(3rem,9vw,7.4rem);font-weight:800;letter-spacing:.02em;line-height:.98}
+  .hero .sub{font-size:clamp(1rem,2vw,1.35rem);color:var(--text);margin-top:22px;font-weight:300;letter-spacing:.04em}
+  .hero .sub b{color:var(--gold);font-weight:500}
+  .hero-cta{display:flex;gap:16px;margin-top:40px;flex-wrap:wrap}
+  .scroll-cue{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:2;
+    font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:10px}
+  .scroll-cue::after{content:"";width:1px;height:46px;background:linear-gradient(var(--gold),transparent);animation:cue 2s infinite}
+  @keyframes cue{0%{opacity:.2;transform:scaleY(.4)}50%{opacity:1}100%{opacity:.2;transform:scaleY(.4)}}
+
+  /* SECTION */
+  section{padding:120px 0;position:relative}
+  .sec-head{margin-bottom:56px;max-width:680px}
+  .sec-head h2{font-size:clamp(2.1rem,5vw,3.6rem)}
+  .sec-head p{color:var(--muted);margin-top:18px;font-size:17px}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:64px;align-items:center}
+  .about-photo{position:relative}
+  .about-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px}
+  .about-photo::before{content:"";position:absolute;inset:-14px -14px 14px 14px;border:1px solid var(--gold);border-radius:3px;z-index:-1;opacity:.5}
+  .about-body h2{font-size:clamp(2rem,4.4vw,3.2rem);margin-bottom:24px}
+  .about-body p{color:#cfc9bd;font-size:17px;margin-bottom:18px}
+  .about-body p:last-child{margin-bottom:0}
+
+  /* STATS */
+  .stats{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .stat{background:var(--bg);padding:38px 26px;text-align:center}
+  .stat .v{font-family:"Playfair Display",serif;font-size:clamp(1.6rem,3vw,2.4rem);color:var(--gold);font-weight:700}
+  .stat .k{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+
+  /* PORTFOLIO */
+  .filters{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px}
+  .more-wrap{margin-top:60px}
+  .more-divider{display:flex;align-items:center;gap:20px;margin:0 0 30px;color:var(--muted);font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:600}
+  .more-divider span{white-space:nowrap}
+  .more-divider::before,.more-divider::after{content:"";flex:1;height:1px;background:var(--line)}
+  .more-toggle{display:block;margin:0 auto 38px;background:transparent;border:1px solid var(--line);color:var(--text);font-family:inherit;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:14px 32px;cursor:pointer;transition:.25s}
+  .more-toggle:hover{border-color:var(--gold);color:var(--gold)}
+  .more-gallery[hidden]{display:none}
+  .filter{
+    background:transparent;border:1px solid var(--line);color:var(--muted);
+    font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;
+    padding:11px 22px;border-radius:2px;cursor:pointer;transition:.25s;font-family:inherit;
+  }
+  .filter:hover{color:var(--text);border-color:rgba(255,255,255,.3)}
+  .filter.active{background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#16120a;border-color:transparent}
+  .gallery{column-count:4;column-gap:14px}
+  .gallery figure{break-inside:avoid;margin:0 0 14px;position:relative;overflow:hidden;border-radius:3px;cursor:pointer;background:var(--surface)}
+  .gallery figure img{width:100%;transition:transform .7s cubic-bezier(.2,.8,.2,1);opacity:0}
+  .gallery figure img.loaded{opacity:1}
+  .gallery figure:hover img{transform:scale(1.05)}
+  .gallery figure::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,8,9,.45),transparent 55%);opacity:0;transition:.35s}
+  .gallery figure:hover::after{opacity:1}
+  .gallery figure figcaption{position:absolute;left:16px;bottom:14px;z-index:2;
+    font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);
+    opacity:0;transform:translateY(8px);transition:.35s}
+  .gallery figure:hover figcaption{opacity:1;transform:translateY(0)}
+  .gallery.is-empty::before{content:"Portfolio loading";color:var(--muted);font-size:14px;letter-spacing:.2em;text-transform:uppercase}
+
+  /* BRANDS */
+  .brands{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
+  .brands .eyebrow{margin-bottom:16px}
+  .brands h2{font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:18px}
+  .brands p{color:var(--muted);max-width:620px;margin:0 auto 30px;font-size:17px}
+  .brand-link{display:inline-flex;align-items:center;gap:10px;color:var(--gold);font-weight:600;
+    letter-spacing:.1em;text-transform:uppercase;font-size:13px;border-bottom:1px solid var(--gold);padding-bottom:4px}
+  .brand-link:hover{color:var(--text);border-color:var(--text)}
+  .brand-list{display:flex;flex-wrap:wrap;gap:16px 26px;justify-content:center;margin-top:6px}
+
+  /* BOOKING */
+  .booking{text-align:center;background:radial-gradient(ellipse at 50% 0%,rgba(217,179,112,.1),transparent 60%)}
+  .booking h2{font-size:clamp(2.4rem,6vw,4.4rem);margin-bottom:22px}
+  .booking .lead{color:#cfc9bd;font-size:18px;max-width:560px;margin:0 auto 36px}
+  .svc{display:flex;gap:14px 30px;flex-wrap:wrap;justify-content:center;margin:0 auto 46px;max-width:780px}
+  .svc li{list-style:none;color:var(--muted);font-size:14px;letter-spacing:.06em}
+  .svc li::before{content:"·";color:var(--gold);margin-right:14px;font-weight:700}
+  .book-email{font-family:"Playfair Display",serif;font-size:clamp(1.4rem,3.4vw,2.2rem);color:var(--gold);display:inline-block;margin-bottom:34px}
+  .book-email:hover{color:var(--text)}
+  .book-meta{color:var(--muted);font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-top:30px}
+  .book-ig{margin-top:26px}
+  .book-ig a{display:inline-flex;align-items:center;gap:8px;color:var(--gold);font-weight:600;
+    letter-spacing:.04em;text-transform:none;font-size:14px;border-bottom:1px solid rgba(217,179,112,.5);padding-bottom:5px;transition:.2s;white-space:nowrap}
+  .book-ig a:hover{color:var(--text);border-color:var(--text)}
+  .ig-ico{flex:none}
+
+  /* FOOTER */
+  footer{border-top:1px solid var(--line);padding:54px 0;text-align:center}
+  .foot-brand{font-family:"Playfair Display",serif;letter-spacing:.24em;text-transform:uppercase;font-size:18px}
+  .foot-brand span{color:var(--gold)}
+  .foot-links{display:flex;gap:26px;justify-content:center;margin:22px 0 18px;flex-wrap:wrap}
+  .foot-links a{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);transition:.2s}
+  .foot-links a:hover{color:var(--gold)}
+  .copy{color:#5f5b53;font-size:12px;letter-spacing:.08em}
+
+  /* LIGHTBOX */
+  .lb{position:fixed;inset:0;z-index:200;background:rgba(6,6,7,.96);display:none;align-items:center;justify-content:center}
+  .lb.open{display:flex}
+  .lb img{max-width:90vw;max-height:86vh;object-fit:contain;border-radius:2px;box-shadow:0 30px 90px rgba(0,0,0,.7)}
+  .lb-close,.lb-nav{position:absolute;background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--text);
+    cursor:pointer;width:52px;height:52px;border-radius:50%;font-size:20px;display:flex;align-items:center;justify-content:center;transition:.25s}
+  .lb-close:hover,.lb-nav:hover{background:var(--gold);color:#16120a;border-color:transparent}
+  .lb-close{top:26px;right:26px}
+  .lb-nav.prev{left:26px;top:50%;transform:translateY(-50%)}
+  .lb-nav.next{right:26px;top:50%;transform:translateY(-50%)}
+  .lb-count{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:var(--muted);font-size:12px;letter-spacing:.22em}
+
+  /* REVEAL */
+  .reveal{opacity:0;transform:translateY(34px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.8,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* RESPONSIVE */
+  @media(max-width:1024px){
+    .gallery{column-count:3}
+    .about-grid{gap:44px}
+  }
+  @media(max-width:860px){
+    header.nav.scrolled{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(10,10,11,.95)}
+    nav.links{position:fixed;inset:0 0 0 auto;width:80%;max-width:360px;background:var(--bg-2);z-index:64;
+      flex-direction:column;align-items:flex-start;justify-content:center;gap:8px;padding:64px 40px;
+      transform:translateX(100%);transition:transform .45s ease;border-left:1px solid var(--line);box-shadow:-30px 0 70px rgba(0,0,0,.55)}
+    nav.links.open{transform:translateX(0)}
+    nav.links a{font-size:17px;color:var(--text);letter-spacing:.14em;width:100%;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+    nav.links a.btn{margin-top:18px;border-bottom:0;width:auto;padding:15px 26px;color:#0b0b0b}
+    .menu-toggle{display:flex}
+    .menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .menu-toggle.open span:nth-child(2){opacity:0}
+    .menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    section{padding:84px 0}
+    .about-grid{grid-template-columns:1fr}
+    .about-photo{max-width:420px}
+    .stats-grid{grid-template-columns:repeat(2,1fr)}
+    .gallery{column-count:2}
+    .hero-bg::after{background:linear-gradient(0deg,rgba(8,8,9,.92) 0%,rgba(8,8,9,.35) 60%,rgba(8,8,9,.5) 100%)}
+    .hero-bg img{object-position:20% 30%}
+    .hero-inner{padding-bottom:clamp(26px,4.5vh,54px)}
+  }
+  @media(max-width:520px){
+    .wrap{padding:0 20px}
+    header.nav{padding:18px 20px}
+    section{padding:46px 0 62px}
+    .sec-head{margin-bottom:32px}
+    .hero-cta{flex-direction:column;align-items:flex-start}
+    .hero-cta .btn{width:100%;justify-content:center}
+    .stats-grid{grid-template-columns:1fr}
+    .stat{padding:26px 22px}
+    .stat .v{font-size:clamp(1.3rem,5vw,1.75rem)}
+    .filters{gap:6px;margin-bottom:30px;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+    .filters::-webkit-scrollbar{display:none}
+    .filter{padding:9px 11px;font-size:10px;letter-spacing:.05em;flex:none;white-space:nowrap}
+    .gallery{column-count:1}
+    .book-email{font-size:1.5rem}
+    .svc{gap:10px 22px}
+    .svc li{font-size:13px}
+    .lb-nav{width:44px;height:44px}
+    .lb-close{top:18px;right:18px;width:44px;height:44px}
+  }
+  @media(max-width:380px){
+    .hero h1{font-size:46px}
+    .hero .sub{font-size:.95rem;margin-top:16px}
+    .hero-cta{margin-top:28px}
+    .brand{font-size:18px;letter-spacing:.18em}
+  }
+  @media(hover:none){
+    .gallery figure:hover img{transform:none}
+    .gallery figure::after{opacity:1;background:linear-gradient(0deg,rgba(8,8,9,.35),transparent 70%)}
+    .gallery figure figcaption{opacity:1;transform:none}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+    .reveal{opacity:1;transform:none}
+  }
+</style>
+<style id="theme-variant">
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;0,6..96,800;0,6..96,900;1,6..96,600&family=Jost:wght@300;400;500;600;700&display=swap');
+:root{--bg:#0b0b0b;--bg-2:#121212;--surface:#181818;--line:rgba(255,255,255,.13);--text:#f4efe7;--muted:#8f897f;--gold:#ff3d86;--gold-2:#d11f63;}
+body{background:var(--bg);color:var(--text);font-family:"Jost",-apple-system,BlinkMacSystemFont,sans-serif}
+h1,h2,h3,.about-body h2,.book-email,.foot-brand{font-family:"Bodoni Moda",Georgia,serif;letter-spacing:0}
+.brand{font-family:"Bodoni Moda",Georgia,serif;letter-spacing:.3em;font-weight:700}
+.brand span,.foot-brand span{color:var(--gold)}
+.stat .v{font-family:"Bodoni Moda",Georgia,serif;color:var(--text)}
+.stat .k{color:var(--gold)}
+.eyebrow{color:#ff5fa0;letter-spacing:.24em;font-weight:600;font-size:13px;font-family:"Jost",sans-serif}
+.sec-head .eyebrow,.about-body .eyebrow,.brands .eyebrow,.booking .eyebrow{color:#ff5fa0}
+.hero{align-items:flex-end;border-top:0}
+.hero .eyebrow{font-size:15px;letter-spacing:.2em;font-weight:700;color:#ff4d96;text-shadow:0 1px 2px rgba(0,0,0,.95),0 2px 10px rgba(0,0,0,.8),0 0 22px rgba(255,77,150,.55)}
+.hero h1{font-size:clamp(3.2rem,10.5vw,9rem);letter-spacing:.015em;font-weight:900;text-shadow:0 1px 3px rgba(0,0,0,.7),0 2px 16px rgba(0,0,0,.6),0 6px 50px rgba(0,0,0,.45)}
+.hero .sub{letter-spacing:.015em;color:#f6f1ea;font-family:"Jost",sans-serif;text-shadow:0 1px 16px rgba(0,0,0,.9)}
+.hero .sub b{color:var(--gold)}
+.hero-bg::after{background:linear-gradient(0deg,rgba(0,0,0,.97) 0%,rgba(0,0,0,.76) 22%,rgba(0,0,0,.17) 48%,rgba(0,0,0,.04) 70%,rgba(0,0,0,.56) 100%)}
+.btn{border-radius:0;letter-spacing:.18em;font-family:"Jost",sans-serif}
+.btn-gold{background:var(--text);color:#0b0b0b}
+.btn-gold:hover{background:var(--gold);color:#0b0b0b}
+.btn-ghost{border-color:rgba(244,239,231,.5);color:var(--text)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+section{border-top:1px solid rgba(255,255,255,.06)}
+.sec-head h2{font-size:clamp(2.4rem,5.6vw,4.3rem)}
+.filter{border-radius:0;letter-spacing:.16em;font-family:"Jost",sans-serif}
+.filter.active{background:var(--text);color:#0b0b0b;border-color:transparent}
+.gallery figure{border-radius:0}
+.gallery figure figcaption{color:var(--text);letter-spacing:.2em;font-family:"Jost",sans-serif}
+.about-photo img{border-radius:0}
+.about-photo::before{border-color:var(--gold);inset:-16px -16px 16px 16px;opacity:.8}
+.brand-link{color:var(--gold);border-color:var(--gold);font-family:"Jost",sans-serif}
+.book-email{font-style:italic}
+.book-ig a{border-bottom-color:var(--gold);font-family:"Jost",sans-serif}
+.booking{background:radial-gradient(ellipse at 50% 0%,rgba(255,61,134,.10),transparent 62%)}
+.lb{background:rgba(0,0,0,.97)}
+nav.links a,.copy,.book-meta,.sec-head p{font-family:"Jost",sans-serif}
+@media(max-width:520px){
+.hero h1{font-size:clamp(3rem,11vw,4.2rem);letter-spacing:.01em}
+.eyebrow{font-size:12px;letter-spacing:.18em}
+.hero .eyebrow{font-size:13px}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Kayla Rockett",
+  "alternateName": "@kaylarocketts_world",
+  "jobTitle": "Model",
+  "description": "Las Vegas based swimwear, lingerie and fashion model. Available for campaigns, editorial, appearances and hosting.",
+  "image": "https://kaylarockett.com/images/hero.jpg",
+  "url": "https://kaylarockett.com/",
+  "gender": "Female",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Las Vegas",
+    "addressRegion": "NV",
+    "addressCountry": "US"
+  },
+  "knowsAbout": ["Swimwear modeling","Lingerie modeling","Fashion modeling","Brand campaigns","Editorial modeling","Hosting","Appearances"],
+  "sameAs": ["https://www.instagram.com/kaylarocketts_world/"],
+  "email": "contact@kaylarockett.com",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "contact@kaylarockett.com",
+    "contactType": "Booking"
+  }
+}
+</script>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a href="#top" class="brand">Kayla<span>·</span>Rockett</a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  <nav class="links" id="navLinks">
+    <a href="#about">About</a>
+    <a href="#stats">Stats</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#booking">Booking</a>
+    <a href="mailto:contact@kaylarockett.com" class="btn btn-gold">Book Kayla</a>
+  </nav>
+</header>
+<div class="nav-backdrop" id="navBackdrop"></div>
+
+<a id="top"></a>
+<section class="hero" style="padding:0">
+  <div class="hero-bg"><img id="heroImg" src="images/hero.jpg?v=2" srcset="images/hero-sm.jpg?v=2 1200w, images/hero.jpg?v=2 2600w" sizes="100vw" fetchpriority="high" alt="Kayla Rockett, Las Vegas swimwear and lingerie model" width="2600" height="1733" /></div>
+  <div class="hero-inner">
+    <div class="wrap">
+      <p class="eyebrow">Las Vegas based</p>
+      <h1>KAYLA<br>ROCKETT</h1>
+      <p class="sub">Swimwear, lingerie &amp; fashion model. <b>Available for campaigns, editorial, appearances &amp; hosting.</b></p>
+      <div class="hero-cta">
+        <a href="mailto:contact@kaylarockett.com?subject=Booking%20inquiry%20for%20Kayla%20Rockett" class="btn btn-gold">Book Kayla</a>
+        <a href="#portfolio" class="btn btn-ghost">View portfolio</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-photo reveal"><img id="aboutImg" src="images/about.jpg?v=2" alt="Kayla Rockett portrait" width="1133" height="1700" /></div>
+      <div class="about-body reveal">
+        <p class="eyebrow">About Kayla</p>
+        <h2>Confidence that books the shot</h2>
+        <p>Kayla Rockett is a swimwear and lingerie model based in Las Vegas. Born and raised in New Jersey, she brings East Coast edge and Las Vegas energy to every set.</p>
+        <p>Versatile in front of the camera and easy to work with on it, Kayla shoots swimwear, lingerie and fashion campaigns, and is available for brand appearances, hosting and events.</p>
+        <p>Studio editorial, a poolside swim line, or a brand activation on the Strip, she shows up camera-ready and brings energy that translates on screen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="stats" class="stats">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">The details</p>
+      <h2>Stats</h2>
+    </div>
+    <div class="stats-grid reveal">
+      <div class="stat"><div class="v">5&#39; 7.5&#34;</div><div class="k">Height</div></div>
+      <div class="stat"><div class="v">125 lbs</div><div class="k">Weight</div></div>
+      <div class="stat"><div class="v">32 · 24 · 36.5</div><div class="k">Bust · waist · hips</div></div>
+      <div class="stat"><div class="v">8.5</div><div class="k">Shoe (US)</div></div>
+      <div class="stat"><div class="v">Blonde</div><div class="k">Hair</div></div>
+      <div class="stat"><div class="v">Brown / blue</div><div class="k">Eyes</div></div>
+      <div class="stat"><div class="v">Las Vegas</div><div class="k">Based in</div></div>
+      <div class="stat"><div class="v">Freelance</div><div class="k">Direct booking</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Selected work</p>
+      <h2>Portfolio</h2>
+      <p>A selection of swimwear, lingerie and fashion. Tap any image to view full size.</p>
+    </div>
+    <div class="filters reveal" id="filters">
+      <button class="filter active" data-cat="all">All</button>
+      <button class="filter" data-cat="swimwear">Swimwear</button>
+      <button class="filter" data-cat="lingerie">Lingerie</button>
+      <button class="filter" data-cat="fashion">Fashion</button>
+      <button class="filter" data-cat="lifestyle">Lifestyle</button>
+      <button class="filter" data-cat="portrait">Portrait</button>
+    </div>
+    <div class="gallery is-empty" id="gallery"></div>
+    <div class="more-wrap reveal">
+      <div class="more-divider"><span>More photos</span></div>
+      <button class="more-toggle" id="moreToggle" aria-expanded="false">Show more photos</button>
+      <div class="gallery more-gallery" id="moreGallery" hidden></div>
+    </div>
+  </div>
+</section>
+
+<section class="brands">
+  <div class="wrap">
+    <p class="eyebrow">Brand &amp; clothing partnerships</p>
+    <h2>Now booking clothing &amp; apparel campaigns</h2>
+    <p>Available to model and promote clothing lines, swim labels and apparel brands. Open to ambassador and campaign work with labels like:</p>
+    <div class="brand-list">
+      <a class="brand-link" href="https://outcast-clothing.us/" target="_blank" rel="noopener noreferrer">Outcast Clothing</a>
+      <a class="brand-link" href="https://us.honeybirdette.com/" target="_blank" rel="noopener noreferrer">Honey Birdette</a>
+      <a class="brand-link" href="https://us.ohpolly.com/" target="_blank" rel="noopener noreferrer">Oh Polly</a>
+      <a class="brand-link" href="https://www.fashionnova.com/" target="_blank" rel="noopener noreferrer">Fashion Nova</a>
+      <a class="brand-link" href="https://www.beachbunnyswimwear.com/" target="_blank" rel="noopener noreferrer">Beach Bunny Swimwear</a>
+      <a class="brand-link" href="https://www.shopcrush.com/" target="_blank" rel="noopener noreferrer">Crush</a>
+    </div>
+  </div>
+</section>
+
+<section id="booking" class="booking">
+  <div class="wrap">
+    <p class="eyebrow reveal">Let&#39;s work together</p>
+    <h2 class="reveal">Book Kayla</h2>
+    <p class="lead reveal">Freelance and booking direct. For rates, availability and full portfolio, reach out below.</p>
+    <ul class="svc reveal">
+      <li>Swimwear &amp; lingerie</li>
+      <li>Fashion &amp; clothing lines</li>
+      <li>Editorial &amp; print</li>
+      <li>Appearances &amp; hosting</li>
+      <li>Events &amp; activations</li>
+      <li>Brand ambassador</li>
+    </ul>
+    <a class="book-email reveal" href="mailto:contact@kaylarockett.com?subject=Booking%20inquiry%20for%20Kayla%20Rockett">contact@kaylarockett.com</a>
+    <div class="reveal"><a href="mailto:contact@kaylarockett.com?subject=Booking%20inquiry%20for%20Kayla%20Rockett" class="btn btn-gold">Send a booking enquiry</a></div>
+    <p class="book-ig reveal"><a href="https://www.instagram.com/kaylarocketts_world/" target="_blank" rel="noopener noreferrer" aria-label="Instagram, kaylarocketts_world"><svg class="ig-ico" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true" focusable="false"><rect x="2.2" y="2.2" width="19.6" height="19.6" rx="5.6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.7" cy="6.3" r="1.4" fill="currentColor"/></svg>@kaylarocketts_world</a></p>
+    <p class="book-meta reveal">Based in Las Vegas · Travel available on request</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-brand">Kayla<span>·</span>Rockett</div>
+    <div class="foot-links">
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#booking">Booking</a>
+      <a href="mailto:contact@kaylarockett.com">contact@kaylarockett.com</a>
+      <a id="igLink" href="https://www.instagram.com/kaylarocketts_world/" target="_blank" rel="noopener noreferrer">@kaylarocketts_world</a>
+    </div>
+    <p class="copy">© <span id="yr"></span> Kayla Rockett. All rights reserved.</p>
+  </div>
+</footer>
+
+<div class="lb" id="lb" aria-hidden="true">
+  <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+  <button class="lb-nav prev" id="lbPrev" aria-label="Previous">‹</button>
+  <img id="lbImg" src="" alt="Kayla Rockett portfolio image" />
+  <button class="lb-nav next" id="lbNext" aria-label="Next">›</button>
+  <div class="lb-count" id="lbCount"></div>
+</div>
+
+<script>
+/* ---- Photo data ---- */
+const FEATURED = [
+  {file:"01.jpg",cat:"portrait",alt:"Kayla Rockett beauty close-up with tousled blonde hair and layered chokers outdoors",w:515,h:640},
+  {file:"02.jpg",cat:"swimwear",alt:"Kayla Rockett in a white crochet micro swimsuit holding a cigarette on a balcony at sunset",w:512,h:640},
+  {file:"03.jpg",cat:"lingerie",alt:"Kayla Rockett in a purple buckled harness lingerie set with heels reclining on an orange couch",w:640,h:634},
+  {file:"04.jpg",cat:"lingerie",alt:"Kayla Rockett in a pink and blue floral sheer lingerie set with garter straps in a modern kitchen",w:512,h:640},
+  {file:"05.jpg",cat:"swimwear",alt:"Kayla Rockett in a pink flame-print string bikini with chain detail on a rooftop balcony",w:522,h:640},
+  {file:"06.jpg",cat:"fashion",alt:"Kayla Rockett in a knotted white shirt and hot pink thigh-high boots posed beside a standing mirror",w:512,h:640},
+  {file:"07.jpg",cat:"lingerie",alt:"Kayla Rockett in a pink heart-cutout bra and garter set with pink sunglasses leaning in a doorway",w:426,h:640},
+  {file:"08.jpg",cat:"lingerie",alt:"Kayla Rockett in a sheer neon orange floral lingerie set with garter and orange stockings, kneeling on a white bed",w:560,h:640},
+  {file:"09.jpg",cat:"swimwear",alt:"Close-up of a blonde model in a pale pink bikini top against a weathered wooden wall.",w:512,h:640},
+  {file:"10.jpg",cat:"lingerie",alt:"Kayla Rockett in a leopard-print lace bra and garter set wearing a black masquerade mask in soft daylight",w:426,h:640},
+  {file:"11.jpg",cat:"lingerie",alt:"Blonde model in a leopard-print harness lingerie set, gold collar, and studded thigh-high boots holding a riding crop.",w:487,h:640},
+  {file:"12.jpg",cat:"lingerie",alt:"Kayla Rockett in a leopard-print bra and garter set with matching stockings by a floor-to-ceiling window",w:426,h:640},
+  {file:"13.jpg",cat:"lingerie",alt:"Kayla Rockett in a black lace bra and garter set kneeling on a bright orange couch",w:512,h:640},
+  {file:"14.jpg",cat:"swimwear",alt:"Kayla Rockett in a pink flame-print string bikini with chain detail on a rooftop balcony",w:512,h:640},
+  {file:"15.jpg",cat:"lingerie",alt:"Blonde model in leopard-print lingerie with garter stockings and a black eye mask by a sunlit window.",w:426,h:640},
+  {file:"16.jpg",cat:"lingerie",alt:"Kayla Rockett in a blush pink strappy harness lingerie set with heeled sandals against a light wall",w:512,h:640},
+  {file:"17.jpg",cat:"lingerie",alt:"Blonde model in a purple strappy lingerie set with garters kneeling on an orange couch.",w:640,h:640},
+  {file:"18.jpg",cat:"lingerie",alt:"Kayla Rockett in a blue satin bra and garter set leaning on a dark glossy table",w:426,h:640},
+  {file:"19.jpg",cat:"lingerie",alt:"Kayla Rockett in a blue strappy lingerie set with floral-print heels seated on a beige couch, viewed from behind",w:426,h:640},
+  {file:"20.jpg",cat:"swimwear",alt:"Kayla Rockett in a blush ruched string bikini posed against weathered wood beams",w:512,h:640},
+  {file:"21.jpg",cat:"lingerie",alt:"Blonde model in a white tied shirt and bottoms with pink thigh-high boots in a studio.",w:526,h:640},
+  {file:"22.jpg",cat:"lingerie",alt:"Kayla Rockett in a sheer neon orange embroidered lingerie set with garter and stockings kneeling on a bed",w:579,h:640},
+  {file:"23.jpg",cat:"swimwear",alt:"Blonde model standing in a pool in a pink fishnet bikini with a mountain view behind her.",w:512,h:640},
+  {file:"24.jpg",cat:"swimwear",alt:"Blonde model posing in shallow pool water in a pink fishnet bikini against a desert landscape.",w:512,h:640},
+  {file:"25.jpg",cat:"lingerie",alt:"Kayla Rockett in a black latex bra and chain-detail bottoms posed by a pole in a studio",w:426,h:640},
+  {file:"26.jpg",cat:"lingerie",alt:"Kayla Rockett in a green sheer embroidered lingerie set with chain details in warm window light",w:426,h:640},
+  {file:"27.jpg",cat:"lingerie",alt:"Blonde model posing in a green chain-detail bra and garter lingerie set against a tan studio wall.",w:426,h:640},
+  {file:"28.jpg",cat:"lingerie",alt:"Rear view of a blonde model in a green lace lingerie and garter set with gold shoulder chains.",w:426,h:640},
+  {file:"29.jpg",cat:"lingerie",alt:"Kayla Rockett in a purple buckled harness lingerie set with heels reclining on an orange couch",w:525,h:640},
+  {file:"30.jpg",cat:"lingerie",alt:"Kayla Rockett in a pink mesh bra and garter set with heart-pattern stockings and pink sunglasses, viewed from behind",w:506,h:640},
+  {file:"31.jpg",cat:"lingerie",alt:"Kayla Rockett in a leopard-print lingerie set with thigh-high studded boots holding a riding crop in a studio",w:508,h:640},
+  {file:"32.jpg",cat:"lingerie",alt:"Blonde model in a leopard-print strappy lingerie set and thigh-high boots posing with a riding crop in a studio.",w:548,h:640},
+  {file:"33.jpg",cat:"lingerie",alt:"Blonde model in a strappy black bodysuit and lace-up boots reclining on an orange lounger.",w:640,h:636},
+  {file:"34.jpg",cat:"swimwear",alt:"Kayla Rockett in a pink wrap-tie string bikini leaning against a white wall",w:512,h:640},
+  {file:"35.jpg",cat:"fashion",alt:"Kayla Rockett in a light blue denim bandeau top and matching bottoms posed against a tan wall",w:480,h:640},
+  {file:"36.jpg",cat:"lingerie",alt:"Blonde model in green strappy lingerie posing in profile beside a gold-framed mirror.",w:426,h:640},
+  {file:"37.jpg",cat:"fashion",alt:"Kayla Rockett in a light blue denim lace-up bandeau top and matching skirt against a tan wall",w:512,h:640},
+  {file:"38.jpg",cat:"lingerie",alt:"Kayla Rockett in a neon orange floral-embroidered lingerie set with garter straps and stockings, kneeling on a white bed",w:561,h:640},
+  {file:"39.jpg",cat:"lingerie",alt:"Kayla Rockett in a blush pink strappy harness lingerie set with gold chain details against a light wall",w:512,h:640},
+  {file:"40.jpg",cat:"lingerie",alt:"Kayla Rockett in a turquoise lace strappy lingerie set with a diamond choker in a modern kitchen",w:510,h:640},
+  {file:"41.jpg",cat:"lingerie",alt:"Kayla Rockett in a purple buckled harness lingerie set with gold ring detail seated on a red couch",w:512,h:640},
+  {file:"42.jpg",cat:"lingerie",alt:"Blonde model kneeling on a bed in neon orange lace lingerie with garter stockings and an open white shirt.",w:524,h:640},
+  {file:"43.jpg",cat:"lingerie",alt:"Kayla Rockett in a turquoise lace cutout lingerie set with a diamond choker in a modern kitchen",w:512,h:640},
+  {file:"44.jpg",cat:"swimwear",alt:"Blonde model in a white embellished bikini leaning against a poolside column, holding a cigarette.",w:512,h:640},
+  {file:"45.jpg",cat:"lingerie",alt:"Kayla Rockett in a turquoise lace strappy lingerie set with a diamond choker in a modern kitchen",w:512,h:640},
+  {file:"46.jpg",cat:"lingerie",alt:"Kayla Rockett in a black latex bra and lace robe with patterned stockings kneeling in a dimly lit lounge",w:426,h:640},
+  {file:"47.jpg",cat:"lingerie",alt:"Kayla Rockett in a black lace bra and garter set seated on a bright orange couch",w:512,h:640},
+  {file:"48.jpg",cat:"lingerie",alt:"Blonde model in a pink heart-motif lingerie set with garter stockings and pink sunglasses in a bright room.",w:610,h:640},
+  {file:"49.jpg",cat:"lingerie",alt:"Blonde model in a leopard-print harness lingerie set and gold collar holding a prop against a dark studio backdrop.",w:494,h:640},
+  {file:"50.jpg",cat:"lingerie",alt:"Rear view of a blonde model in a leopard-print lingerie set and thigh-high boots holding a riding crop.",w:497,h:640},
+  {file:"51.jpg",cat:"swimwear",alt:"Kayla Rockett in a string bikini taking a mirror photo in a tiled bathroom, viewed from behind",w:516,h:640},
+  {file:"52.jpg",cat:"swimwear",alt:"Blonde model leaning against a white wall in a pink wrap-tie string bikini.",w:512,h:640},
+  {file:"53.jpg",cat:"swimwear",alt:"Kayla Rockett in a white crochet micro swimsuit kneeling on a daybed at a beachfront cabana",w:480,h:640},
+  {file:"54.jpg",cat:"swimwear",alt:"Blonde model leaning against dark rocks in a hot pink cutout bikini.",w:512,h:640},
+  {file:"55.jpg",cat:"swimwear",alt:"Blonde model posing against volcanic rocks in a hot pink cutout bikini.",w:426,h:640},
+  {file:"56.jpg",cat:"lingerie",alt:"Kayla Rockett in a pink satin robe and black lace stockings reclining on a bed",w:640,h:426},
+  {file:"57.jpg",cat:"lingerie",alt:"Blonde model in leopard-print lingerie and a black mask posing in profile in warm light.",w:426,h:640},
+  {file:"58.jpg",cat:"swimwear",alt:"Kayla Rockett in a white bikini on a beach lounger",w:640,h:426},
+  {file:"59.jpg",cat:"lingerie",alt:"Blonde model in a purple micro bikini with a body chain reclining on a dark couch in a boudoir setting.",w:640,h:427},
+  {file:"60.jpg",cat:"lingerie",alt:"Blonde model seated in a white chair wearing a cropped white top, red lace bottoms, and red Supreme socks.",w:512,h:640},
+  {file:"61.jpg",cat:"lifestyle",alt:"Kayla Rockett in a white cropped tank top, red lace briefs and tall red Supreme socks seated on a chair",w:512,h:640},
+  {file:"62.jpg",cat:"lingerie",alt:"Blonde model in a purple micro bikini lying back on a couch in a moody boudoir-style portrait.",w:640,h:427},
+  {file:"63.jpg",cat:"lingerie",alt:"Kayla Rockett in a magenta lingerie set with body chain reclining on a dark couch",w:640,h:427}
+];
+const MORE = [
+  {file:"m01.jpg",cat:"swimwear",alt:"Blonde model in a nude string bikini kneeling on the wet sand at the beach.",w:426,h:640},
+  {file:"m02.jpg",cat:"swimwear",alt:"Kayla Rockett in a black string bikini reclining on the hood of a blue Lamborghini on a desert road",w:640,h:426},
+  {file:"m03.jpg",cat:"lingerie",alt:"Blonde model in a blue lace bodysuit leaning against a tree in a desert setting.",w:430,h:640},
+  {file:"m04.jpg",cat:"swimwear",alt:"Blonde model in a hot pink fishnet bikini standing in a pool with a desert hillside behind her.",w:512,h:640},
+  {file:"m05.jpg",cat:"swimwear",alt:"Blonde model in an orange string bikini posing on rocks beside a pool.",w:515,h:640},
+  {file:"m06.jpg",cat:"swimwear",alt:"Blonde model in a colorful crochet bikini standing in shallow water at the beach.",w:515,h:640},
+  {file:"m07.jpg",cat:"swimwear",alt:"Blonde model in a turquoise cutout monokini walking along a sunlit pool deck.",w:512,h:640},
+  {file:"m08.jpg",cat:"swimwear",alt:"Blonde model reclining on wet sand at the beach in a nude string bikini under a blue sky.",w:640,h:426},
+  {file:"m09.jpg",cat:"swimwear",alt:"Blonde model in a black micro bikini standing in front of a blue Lamborghini in a desert landscape.",w:426,h:640},
+  {file:"m10.jpg",cat:"swimwear",alt:"Blonde model in a turquoise bikini and snakeskin thigh-high boots against a dark wall.",w:558,h:640},
+  {file:"m11.jpg",cat:"swimwear",alt:"Blonde model in a turquoise cutout swimsuit reclining on a pool deck beside the water.",w:640,h:426},
+  {file:"m12.jpg",cat:"swimwear",alt:"Blonde model in a neon green hooded mesh one-piece on a pool ladder surrounded by greenery.",w:426,h:640},
+  {file:"m13.jpg",cat:"swimwear",alt:"Blonde model posing among tropical palm fronds in a teal micro bikini.",w:425,h:640},
+  {file:"m14.jpg",cat:"swimwear",alt:"Blonde model standing amid palm leaves in a teal string bikini.",w:425,h:640},
+  {file:"m15.jpg",cat:"swimwear",alt:"Blonde model posing among palm fronds in a teal string bikini.",w:425,h:640},
+  {file:"m16.jpg",cat:"swimwear",alt:"Blonde model standing in shallow surf at the beach in a colorful crochet string bikini.",w:426,h:640},
+  {file:"m17.jpg",cat:"swimwear",alt:"Blonde model in a white string bikini standing under an outdoor shower beside tropical foliage.",w:512,h:640},
+  {file:"m18.jpg",cat:"lingerie",alt:"Blonde model in white lace lingerie reclining against a white console table in a modern loft.",w:512,h:640},
+  {file:"m19.jpg",cat:"swimwear",alt:"Blonde model standing indoors in a pale blue embellished string bikini by a brick fireplace.",w:512,h:640},
+  {file:"m20.jpg",cat:"swimwear",alt:"Blonde model with braided hair in a black bikini holding a mint ice cream cone against a plain backdrop.",w:512,h:640},
+  {file:"m21.jpg",cat:"swimwear",alt:"Blonde model posing on poolside railings in a neon yellow mesh one-piece swimsuit.",w:512,h:640},
+  {file:"m22.jpg",cat:"lingerie",alt:"Blonde model in a white lace bra and thong seated on a white table by a window.",w:512,h:640},
+  {file:"m23.jpg",cat:"swimwear",alt:"Blonde model in a blue swimsuit with side drapes posing in front of a pool.",w:512,h:640},
+  {file:"m24.jpg",cat:"swimwear",alt:"Blonde model in a light blue rhinestone bikini posing with hand to her face indoors.",w:426,h:640},
+  {file:"m25.jpg",cat:"swimwear",alt:"Blonde model in a white string bikini standing barefoot beside a silver Rolls-Royce convertible at dusk.",w:426,h:640},
+  {file:"m26.jpg",cat:"swimwear",alt:"Kayla Rockett in a yellow string bikini standing waist-deep in a pool against a brick wall",w:512,h:640},
+  {file:"m27.jpg",cat:"swimwear",alt:"Blonde model in a pink rhinestone bikini posing against red rocks near a pool.",w:520,h:640},
+  {file:"m28.jpg",cat:"fashion",alt:"Blonde model in a denim chain-laced corset top posing outdoors among greenery.",w:516,h:640},
+  {file:"m29.jpg",cat:"swimwear",alt:"Blonde model in a teal bikini and snakeskin thigh-high boots seated on outdoor steps.",w:605,h:640},
+  {file:"m30.jpg",cat:"swimwear",alt:"Blonde model seated on stone steps in a turquoise bikini and snakeskin thigh-high boots.",w:570,h:640},
+  {file:"m31.jpg",cat:"swimwear",alt:"Blonde model in a white crochet bikini posing on a beachfront deck at sunset.",w:480,h:640},
+  {file:"m32.jpg",cat:"swimwear",alt:"Kayla Rockett in a white crochet micro swimsuit with body chain kneeling at a white cabana",w:480,h:640},
+  {file:"m33.jpg",cat:"swimwear",alt:"Blonde model in a leopard print micro bikini standing among palm fronds in dappled light.",w:430,h:640},
+  {file:"m34.jpg",cat:"portrait",alt:"Close-up beauty portrait of a blonde model in a yellow bikini top in a pool.",w:512,h:640},
+  {file:"m35.jpg",cat:"swimwear",alt:"Blonde model in an orange thong bikini photographed from behind among tropical plants.",w:514,h:640},
+  {file:"m36.jpg",cat:"swimwear",alt:"Blonde model in a silver sparkle string bikini posed in the seat of a red-interior convertible.",w:426,h:640},
+  {file:"m37.jpg",cat:"swimwear",alt:"Blonde model on a beach in a nude string bikini, glancing over her shoulder.",w:517,h:640},
+  {file:"m38.jpg",cat:"swimwear",alt:"Blonde model in a black string bikini reclining poolside with palm trees behind her.",w:640,h:425},
+  {file:"m39.jpg",cat:"swimwear",alt:"Blonde model in a teal string bikini and snakeskin boots posing from behind against a concrete wall.",w:522,h:640},
+  {file:"m40.jpg",cat:"swimwear",alt:"Blonde model in a teal bikini and snakeskin thigh-high boots posing from behind on outdoor steps.",w:517,h:640},
+  {file:"m41.jpg",cat:"swimwear",alt:"Blonde model in a pink zip-front one-piece swimsuit standing in front of palm fronds by a pool.",w:429,h:640},
+  {file:"m42.jpg",cat:"swimwear",alt:"Blonde model crouching against red rocks in a hot pink rhinestone bikini.",w:426,h:640},
+  {file:"m43.jpg",cat:"swimwear",alt:"Rear view of a blonde model in a turquoise cutout one-piece swimsuit standing beside a pool.",w:515,h:640},
+  {file:"m44.jpg",cat:"swimwear",alt:"Blonde model seated on a rock in a tropical lagoon wearing a leopard-print monokini.",w:425,h:640},
+  {file:"m45.jpg",cat:"swimwear",alt:"Blonde model viewed from behind on a rocky beach in a hot pink string bikini.",w:426,h:640},
+  {file:"m46.jpg",cat:"swimwear",alt:"Blonde model crouching poolside in a hot pink string bikini surrounded by greenery.",w:512,h:640},
+  {file:"m47.jpg",cat:"swimwear",alt:"Blonde model posing in a hot pink fishnet bikini at the edge of an infinity pool overlooking a valley.",w:512,h:640},
+  {file:"m48.jpg",cat:"swimwear",alt:"Blonde model in a light blue rhinestone bikini seated against a brick wall.",w:427,h:640},
+  {file:"m49.jpg",cat:"swimwear",alt:"Blonde model in a black bikini lying on her side at the edge of a pool.",w:640,h:422},
+  {file:"m50.jpg",cat:"swimwear",alt:"Blonde model in a pink cut-out bikini posing against a rocky cliff face.",w:542,h:640},
+  {file:"m51.jpg",cat:"swimwear",alt:"Blonde model in a pink cut-out bikini standing in front of a rock wall.",w:519,h:640},
+  {file:"m52.jpg",cat:"swimwear",alt:"Blonde model in a black micro bikini posing in front of a blue sports car at dusk.",w:426,h:640},
+  {file:"m53.jpg",cat:"swimwear",alt:"Blonde model in a black-and-white leopard print micro bikini posing among tropical foliage.",w:512,h:640},
+  {file:"m54.jpg",cat:"lifestyle",alt:"Kayla Rockett in a cropped sweatshirt and heeled boots in a bathroom",w:428,h:640},
+  {file:"m55.jpg",cat:"swimwear",alt:"Blonde model viewed from behind by a lagoon in a brown one-piece swimsuit.",w:426,h:640},
+  {file:"m56.jpg",cat:"swimwear",alt:"Blonde model viewed from behind near a lagoon in a brown string bikini.",w:425,h:640},
+  {file:"m57.jpg",cat:"swimwear",alt:"Blonde model in a pink monokini holding a golf club on a green fairway.",w:512,h:640},
+  {file:"m58.jpg",cat:"swimwear",alt:"Blonde model in a pink cutout bikini posed against a rocky natural backdrop.",w:512,h:640},
+  {file:"m59.jpg",cat:"swimwear",alt:"Close-up of a blonde model in a white rhinestone bikini among tropical plants.",w:426,h:640},
+  {file:"m60.jpg",cat:"lingerie",alt:"Kayla Rockett in a pink string bikini with bunny ears, rear view",w:480,h:640},
+  {file:"m61.jpg",cat:"lingerie",alt:"Kayla Rockett in a white lace bra and panty set posed against a high-rise window with a couch",w:512,h:640},
+  {file:"m62.jpg",cat:"lingerie",alt:"Blonde model kneeling on a kitchen counter in a black sequin micro bikini beside white orchids.",w:512,h:640},
+  {file:"m63.jpg",cat:"swimwear",alt:"Blonde model reclining inside a draped tent in a silver rhinestone bikini.",w:640,h:426},
+  {file:"m64.jpg",cat:"swimwear",alt:"Blonde model in a gold metallic bikini top against a soft white backdrop.",w:513,h:640},
+  {file:"m65.jpg",cat:"lingerie",alt:"Blonde model in a white lace bra and thong posing on a bench in a modern living room.",w:512,h:640},
+  {file:"m66.jpg",cat:"swimwear",alt:"Blonde model in a light blue rhinestone bikini posing by an indoor brick fireplace.",w:426,h:640},
+  {file:"m67.jpg",cat:"swimwear",alt:"Blonde model in a silver sparkle string bikini seated in the doorway of a red-interior convertible.",w:426,h:640},
+  {file:"m68.jpg",cat:"swimwear",alt:"Blonde model in a silver sparkle string bikini posed across the seat of a red-interior convertible at dusk.",w:426,h:640},
+  {file:"m69.jpg",cat:"lingerie",alt:"Blonde model in a black bra and thong with a gold body chain posing beside a pole.",w:426,h:640},
+  {file:"m70.jpg",cat:"lifestyle",alt:"Blonde model rinsing a wet white graphic tank top with a handheld shower head, shot from below.",w:427,h:640},
+  {file:"m71.jpg",cat:"swimwear",alt:"Blonde model in an orange string bikini kneeling on a wet pool deck beside turquoise water.",w:426,h:640},
+  {file:"m72.jpg",cat:"lingerie",alt:"Kayla Rockett in a black latex bikini-style set with gold chain and heels posed by a pole in a studio",w:512,h:640},
+  {file:"m73.jpg",cat:"swimwear",alt:"Blonde model seen from behind at the edge of an infinity pool wearing a chain thong, with her reflection in the water.",w:512,h:640},
+  {file:"m74.jpg",cat:"swimwear",alt:"Blonde model in a lilac string bikini posing from behind in a mirrored bathroom.",w:426,h:640},
+  {file:"m75.jpg",cat:"swimwear",alt:"Blonde model in a pink cut-out micro bikini seated on a rock beside a pool.",w:426,h:640},
+  {file:"m76.jpg",cat:"swimwear",alt:"Low-angle shot of a blonde model in a pastel crochet bikini with layered necklaces beneath palm trees.",w:480,h:640},
+  {file:"m77.jpg",cat:"swimwear",alt:"Blonde model in a pastel crochet bikini posed at a low angle against palm trees and a bright sky.",w:480,h:640},
+  {file:"m78.jpg",cat:"lifestyle",alt:"Blonde model lying on a white tile floor in a cropped white top and red Supreme knee socks.",w:512,h:640},
+  {file:"m79.jpg",cat:"swimwear",alt:"Blonde model in a yellow crossover halter top and skirt posing outdoors with arms raised.",w:427,h:640},
+  {file:"m80.jpg",cat:"swimwear",alt:"Blonde model in a silver mesh crop top and lilac rhinestone bikini bottom seated on a poolside lounge chair.",w:512,h:640},
+  {file:"m81.jpg",cat:"swimwear",alt:"Blonde model lying on a woven round mat in a black bikini, photographed from above.",w:640,h:426},
+  {file:"m82.jpg",cat:"swimwear",alt:"Blonde model kneeling on a bed in a rhinestone micro bikini against a draped cream backdrop.",w:426,h:640},
+  {file:"m83.jpg",cat:"swimwear",alt:"Blonde model in a pink furry-trim bikini posing in a mirrored bathroom during a behind-the-scenes shoot.",w:426,h:640},
+  {file:"m84.jpg",cat:"swimwear",alt:"Close-up of a blonde model in a yellow halter bikini standing in a pool against a stone wall.",w:513,h:640},
+  {file:"m85.jpg",cat:"fashion",alt:"Blonde model in a colorful tie-dye bodysuit and strappy heels seated in the doorway of a blue sports car at night.",w:513,h:640},
+  {file:"m86.jpg",cat:"fashion",alt:"Blonde model in a pink rhinestone bustier crop top posing in front of a magenta Jeep.",w:640,h:612},
+  {file:"m87.jpg",cat:"swimwear",alt:"Blonde model in a gold metallic micro bikini posing in profile by a sunlit curtained window.",w:513,h:640},
+  {file:"m88.jpg",cat:"lifestyle",alt:"Blonde model rinsing a wet white graphic tank top with a handheld shower head in a bright bathroom.",w:512,h:640},
+  {file:"m89.jpg",cat:"swimwear",alt:"Blonde model in a silver sparkle string bikini reclining in the seat of a red-interior convertible with a city view behind.",w:426,h:640},
+  {file:"m90.jpg",cat:"lingerie",alt:"Blonde model kneeling and arching on a kitchen counter in a black sequin thong bikini.",w:426,h:640},
+  {file:"m91.jpg",cat:"lingerie",alt:"Blonde model posing on a kitchen counter in a black sequin micro bikini with hair tied up.",w:426,h:640}
+];
+
+/* ---- Gallery render ---- */
+const gEl=document.getElementById('gallery'),mEl=document.getElementById('moreGallery');
+let curCat='all',moreOpen=false;
+function build(el,data){
+  const list=(curCat==='all')?data:data.filter(p=>p.cat===curCat);
+  el.innerHTML='';el.classList.toggle('is-empty',list.length===0);
+  list.forEach((p,i)=>{
+    const fig=document.createElement('figure');
+    const img=document.createElement('img');
+    img.loading='lazy';img.decoding='async';img.src='thumbs/'+p.file;img.alt=p.alt||'Kayla Rockett portfolio image';
+    if(p.w){img.width=p.w;img.height=p.h;}
+    img.addEventListener('load',()=>img.classList.add('loaded'));if(img.complete)img.classList.add('loaded');
+    const cap=document.createElement('figcaption');cap.textContent=p.cat;
+    fig.appendChild(img);fig.appendChild(cap);
+    fig.addEventListener('click',()=>openLB(list,i));
+    el.appendChild(fig);
+  });
+}
+function renderAll(){build(gEl,FEATURED);if(moreOpen)build(mEl,MORE);}
+document.getElementById('filters').addEventListener('click',e=>{
+  const b=e.target.closest('.filter');if(!b)return;
+  document.querySelectorAll('.filter').forEach(f=>f.classList.remove('active'));
+  b.classList.add('active');curCat=b.dataset.cat;renderAll();
+});
+const moreToggle=document.getElementById('moreToggle');
+moreToggle.addEventListener('click',()=>{
+  moreOpen=!moreOpen;mEl.hidden=!moreOpen;
+  moreToggle.setAttribute('aria-expanded',moreOpen);
+  moreToggle.textContent=moreOpen?'Hide more photos':('Show more photos ('+((curCat==='all')?MORE.length:MORE.filter(p=>p.cat===curCat).length)+')');
+  if(moreOpen)build(mEl,MORE);
+});
+
+/* ---- Lightbox ---- */
+const lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg'),lbCount=document.getElementById('lbCount');
+let lbi=0,lbList=[];
+function openLB(list,i){lbList=list;lbi=i;showLB();lb.classList.add('open');lb.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}
+function closeLB(){lb.classList.remove('open');lb.setAttribute('aria-hidden','true');document.body.style.overflow='';}
+function showLB(){const p=lbList[lbi];if(!p)return;lbImg.src='images/'+p.file;lbImg.alt=p.alt||'Kayla Rockett';lbCount.textContent=(lbi+1)+' / '+lbList.length;}
+function nav(d){lbi=(lbi+d+lbList.length)%lbList.length;showLB();}
+document.getElementById('lbClose').addEventListener('click',closeLB);
+document.getElementById('lbPrev').addEventListener('click',()=>nav(-1));
+document.getElementById('lbNext').addEventListener('click',()=>nav(1));
+lb.addEventListener('click',e=>{if(e.target===lb)closeLB();});
+document.addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')closeLB();if(e.key==='ArrowRight')nav(1);if(e.key==='ArrowLeft')nav(-1);});
+let tsx=0;
+lb.addEventListener('touchstart',e=>tsx=e.changedTouches[0].clientX,{passive:true});
+lb.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-tsx;if(Math.abs(dx)>50)nav(dx<0?1:-1);},{passive:true});
+
+/* ---- Nav scroll + mobile menu ---- */
+const navEl=document.getElementById('nav');
+addEventListener('scroll',()=>navEl.classList.toggle('scrolled',scrollY>40));
+const mt=document.getElementById('menuToggle'),nl=document.getElementById('navLinks'),bd=document.getElementById('navBackdrop');
+function setMenu(open){mt.classList.toggle('open',open);nl.classList.toggle('open',open);if(bd)bd.classList.toggle('open',open);document.body.style.overflow=open?'hidden':'';}
+mt.addEventListener('click',()=>setMenu(!nl.classList.contains('open')));
+if(bd)bd.addEventListener('click',()=>setMenu(false));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false);});
+nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+
+/* ---- Reveal on scroll ---- */
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+document.getElementById('yr').textContent=new Date().getFullYear();
+build(gEl,FEATURED);
+</script>
+</body>
+</html>

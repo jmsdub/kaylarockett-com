@@ -1,0 +1,5 @@
+# Netlify cache rules — always revalidate so a refresh pulls the latest.
+# HTML and assets are checked against the server on each load (ETag/304),
+# so changed files download fresh and unchanged files stay fast.
+/*
+  Cache-Control: public, max-age=0, must-revalidate
