@@ -1,3 +1,9 @@
 .DS_Store
 *.DS_Store
 .netlify
+
+# macOS / iCloud copy-conflict duplicates (e.g. "08 2.jpg") — never part of the site.
+# All real assets are space-free (01.jpg, m01.jpg, hero.jpg), so ignore any spaced image.
+* *.jpg
+* *.jpeg
+* *.png
