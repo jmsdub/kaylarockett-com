@@ -307,6 +307,25 @@ nav.links a,.copy,.book-meta,.sec-head p{font-family:"Jost",sans-serif}
 .eyebrow{font-size:12px;letter-spacing:.18em}
 .hero .eyebrow{font-size:13px}
 }
+
+/* ===== Playboy x Honey Birdette contest section ===== */
+.nav-vote{color:#ff5fa0!important;font-weight:700!important}
+.nav-vote:hover{color:#ff8fbe!important}
+.contest{background:linear-gradient(180deg,#141416 0%,#0d0d0f 100%);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.contest .contest-head{max-width:760px;margin-bottom:46px}
+.contest h2{font-size:clamp(2.1rem,5vw,3.6rem)}
+.contest h2 em{font-style:italic;color:#ff5fa0;font-weight:inherit}
+.contest .contest-head>p{color:var(--muted);margin-top:18px;font-size:17px;max-width:64ch}
+.contest-cta{display:flex;align-items:center;gap:22px;margin-top:30px;flex-wrap:wrap}
+.contest-note{color:var(--muted);font-size:13px;letter-spacing:.03em}
+.contest-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.contest-grid a{display:block;position:relative;overflow:hidden;background:#000;border:1px solid var(--line);transition:border-color .3s}
+.contest-grid img{display:block;width:100%;aspect-ratio:2/3;object-fit:cover;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.contest-grid a:hover{border-color:#ff5fa0}
+.contest-grid a:hover img{transform:scale(1.05)}
+.contest-grid .tag{position:absolute;left:0;bottom:0;width:100%;padding:16px 14px 12px;background:linear-gradient(0deg,rgba(0,0,0,.72),transparent);color:#fff;font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;opacity:0;transform:translateY(6px);transition:.3s}
+.contest-grid a:hover .tag{opacity:1;transform:none}
+@media(max-width:760px){.contest-grid{grid-template-columns:repeat(2,1fr);gap:12px}}
 </style>
 <script type="application/ld+json">
 {
@@ -342,6 +361,7 @@ nav.links a,.copy,.book-meta,.sec-head p{font-family:"Jost",sans-serif}
   <a href="#top" class="brand">Kayla<span>·</span>Rockett</a>
   <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
   <nav class="links" id="navLinks">
+    <a href="#contest" class="nav-vote">Vote</a>
     <a href="#about">About</a>
     <a href="#stats">Stats</a>
     <a href="#portfolio">Portfolio</a>
@@ -363,6 +383,26 @@ nav.links a,.copy,.book-meta,.sec-head p{font-family:"Jost",sans-serif}
         <a href="mailto:contact@kaylarockett.com?subject=Booking%20inquiry%20for%20Kayla%20Rockett" class="btn btn-gold">Book Kayla</a>
         <a href="#portfolio" class="btn btn-ghost">View portfolio</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="contest" class="contest">
+  <div class="wrap">
+    <div class="contest-head reveal">
+      <p class="eyebrow">Playboy &#215; Honey Birdette</p>
+      <h2>Vote Kayla for the <em>global campaign</em></h2>
+      <p>I&#39;m in the running to be the face of the Playboy &#215; Honey Birdette global ad campaign. These are selects from the May 2026 campaign shoot. Public voting runs June 8 to July 28, with one free vote per day, and every vote supports the Lynne Cohen Foundation for early cancer detection.</p>
+      <div class="contest-cta">
+        <a href="https://contest.kaylarockett.com" target="_blank" rel="noopener" class="btn btn-gold">Vote for Kayla &rarr;</a>
+        <span class="contest-note">Free to vote &middot; one vote per day &middot; June 8 to July 28</span>
+      </div>
+    </div>
+    <div class="contest-grid reveal">
+        <a href="https://contest.kaylarockett.com" target="_blank" rel="noopener"><img src="images/contest-01.jpg?v=1" alt="Kayla Rockett in a blue sequined Honey Birdette lingerie set, seated editorial pose" loading="lazy" decoding="async" width="600" height="900" /><span class="tag">Vote &rarr;</span></a>
+        <a href="https://contest.kaylarockett.com" target="_blank" rel="noopener"><img src="images/contest-02.jpg?v=1" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set, kneeling" loading="lazy" decoding="async" width="600" height="900" /><span class="tag">Vote &rarr;</span></a>
+        <a href="https://contest.kaylarockett.com" target="_blank" rel="noopener"><img src="images/contest-03.jpg?v=1" alt="Kayla Rockett kneeling in a blue Honey Birdette lingerie set with stockings" loading="lazy" decoding="async" width="600" height="900" /><span class="tag">Vote &rarr;</span></a>
+        <a href="https://contest.kaylarockett.com" target="_blank" rel="noopener"><img src="images/contest-04.jpg?v=1" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set, seated editorial portrait" loading="lazy" decoding="async" width="600" height="900" /><span class="tag">Vote &rarr;</span></a>
     </div>
   </div>
 </section>
