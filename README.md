@@ -3,7 +3,7 @@
 Static portfolio site for Kayla Rockett. No build step. This folder IS the deploy repo.
 
 ## Push to GitHub + connect Netlify (one-time)
-    cd /Users/jamesduband/Desktop/Claude/WEBSITE Clients /KaylaRockett.com/site
+    cd /Users/jamesduband/Desktop/Claude/CF Clients/KaylaRockett.com/site
     git remote add origin git@github.com:YOURUSER/kaylarockett-com.git
     git push -u origin main
 
