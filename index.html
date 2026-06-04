@@ -640,7 +640,7 @@ const MORE = [
 const gEl=document.getElementById('gallery'),mEl=document.getElementById('moreGallery');
 let curCat='all',moreOpen=false;
 function build(el,data){
-  const list=(curCat==='all')?data:data.filter(p=>p.cat===curCat);
+  const list=(curCat==='all')?data.filter(p=>p.cat!=='lifestyle'):data.filter(p=>p.cat===curCat);
   el.innerHTML='';el.classList.toggle('is-empty',list.length===0);
   list.forEach((p,i)=>{
     const fig=document.createElement('figure');
@@ -664,7 +664,7 @@ const moreToggle=document.getElementById('moreToggle');
 moreToggle.addEventListener('click',()=>{
   moreOpen=!moreOpen;mEl.hidden=!moreOpen;
   moreToggle.setAttribute('aria-expanded',moreOpen);
-  moreToggle.textContent=moreOpen?'Hide more photos':('Show more photos ('+((curCat==='all')?MORE.length:MORE.filter(p=>p.cat===curCat).length)+')');
+  moreToggle.textContent=moreOpen?'Hide more photos':('Show more photos ('+((curCat==='all')?MORE.filter(p=>p.cat!=='lifestyle').length:MORE.filter(p=>p.cat===curCat).length)+')');
   if(moreOpen)build(mEl,MORE);
 });
 
