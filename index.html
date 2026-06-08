@@ -808,5 +808,29 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 document.getElementById('yr').textContent=new Date().getFullYear();
 renderAll();
 </script>
+<script>
+/* Release Schedule auto-status (PT round timing) */
+(function(){
+  var R=[
+    {name:'Group round 1',start:'2026-06-08T14:00:00-07:00',end:'2026-06-19T13:00:00-07:00'},
+    {name:'Group round 2',start:'2026-06-19T14:00:00-07:00',end:'2026-06-26T13:00:00-07:00'},
+    {name:'Group round 3',start:'2026-06-26T14:00:00-07:00',end:'2026-06-30T13:00:00-07:00'},
+    {name:'Group round 4',start:'2026-06-30T14:00:00-07:00',end:'2026-07-06T13:00:00-07:00'},
+    {name:'Group finals', start:'2026-07-06T14:00:00-07:00',end:'2026-07-13T19:00:00-07:00'}
+  ];
+  var now=new Date();
+  document.querySelectorAll('.hb-rcard').forEach(function(el){
+    var rn=el.querySelector('.rn'),st=el.querySelector('.st');
+    if(!rn||!st)return;
+    var r=R.find(function(x){return x.name===rn.textContent.trim();});
+    if(!r)return;
+    var s=new Date(r.start),e=new Date(r.end);
+    el.classList.remove('on');
+    if(now>=s&&now<e){el.classList.add('on');st.textContent='Live now';}
+    else if(now>=e){st.textContent='Out now';}
+    else{st.textContent='Upcoming';}
+  });
+})();
+</script>
 </body>
 </html>
