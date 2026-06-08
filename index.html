@@ -294,6 +294,10 @@ section{border-top:1px solid rgba(255,255,255,.06)}
 .sec-head h2{font-size:clamp(2.4rem,5.6vw,4.3rem)}
 .filter{border-radius:0;letter-spacing:.16em;font-family:"Jost",sans-serif}
 .filter.active{background:var(--text);color:#0b0b0b;border-color:transparent}
+.filter-hb{display:inline-flex;align-items:center;justify-content:center}
+.filter-hb img{height:14px;width:auto;display:block;filter:brightness(0) invert(1);opacity:.82;transition:opacity .2s,filter .2s}
+.filter-hb:hover img{opacity:1}
+.filter-hb.active img{filter:brightness(0);opacity:1}
 .gallery figure{border-radius:0}
 .gallery figure figcaption{color:var(--text);letter-spacing:.2em;font-family:"Jost",sans-serif}
 .about-photo img{border-radius:0}
@@ -552,6 +556,7 @@ nav.links a,.copy,.book-meta,.sec-head p{font-family:"Jost",sans-serif}
       <button class="filter" data-cat="fashion">Fashion</button>
       <button class="filter" data-cat="lifestyle">Lifestyle</button>
       <button class="filter" data-cat="portrait">Portrait</button>
+      <button class="filter filter-hb" data-cat="honey-birdette" aria-label="Honey Birdette" title="Honey Birdette"><img src="images/honey-birdette-logo.png" alt="Honey Birdette" /></button>
     </div>
     <div class="gallery is-empty" id="gallery"></div>
     <div class="more-wrap reveal" id="moreWrap">
@@ -658,7 +663,15 @@ const FEATURED = [
   {file:"33.jpg",cat:"lifestyle",alt:"Kayla Rockett in a blue sequin halter top and black leather leggings seated in a moody upscale lounge",w:480,h:640},
   {file:"34.jpg",cat:"lifestyle",alt:"Kayla Rockett in a black embellished bustier, studded denim jacket and leather mini skirt on a beachfront balcony at dusk",w:480,h:640},
   {file:"35.jpg",cat:"lifestyle",alt:"Kayla Rockett in a plum polka-dot halter mini dress with a tie waist and feather heels on a garden patio",w:484,h:640},
-  {file:"36.jpg",cat:"lifestyle",alt:"Kayla Rockett in a red satin backless gown with feather trim and a beaded bag by holiday Christmas trees",w:480,h:640}
+  {file:"36.jpg",cat:"lifestyle",alt:"Kayla Rockett in a red satin backless gown with feather trim and a beaded bag by holiday Christmas trees",w:480,h:640},
+  {file:"hba-01.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a coral strappy Honey Birdette lingerie set with stockings",w:561,h:640},
+  {file:"hba-02.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a pink lace Honey Birdette lingerie set",w:512,h:640},
+  {file:"hba-07.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a green and gold lace Honey Birdette lingerie set",w:426,h:640},
+  {file:"hba-08.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a Honey Birdette lingerie set in a modern kitchen",w:512,h:640},
+  {file:"hba-12.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a purple Honey Birdette lingerie set",w:525,h:640},
+  {file:"hba-15.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a black Honey Birdette lingerie set with thigh-high boots",w:548,h:640},
+  {file:"hba-18.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a white Honey Birdette lingerie set",w:426,h:640},
+  {file:"hba-20.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a lavender Honey Birdette lingerie set",w:640,h:634}
 ];
 const MORE = [
   {file:"m01.jpg",cat:"swimwear",alt:"Blonde model in a nude string bikini kneeling on the wet sand at the beach.",w:426,h:640},
@@ -705,7 +718,21 @@ const MORE = [
   {file:"m42.jpg",cat:"swimwear",alt:"Blonde model in a lilac string bikini posing from behind in a mirrored bathroom.",w:426,h:640},
   {file:"m43.jpg",cat:"swimwear",alt:"Low-angle shot of a blonde model in a pastel crochet bikini with layered necklaces beneath palm trees.",w:480,h:640},
   {file:"m45.jpg",cat:"lingerie",alt:"Blonde model in a purple micro bikini lying back on a couch in a moody boudoir-style portrait.",w:640,h:427},
-  {file:"m46.jpg",cat:"lingerie",alt:"Kayla Rockett in a magenta lingerie set with body chain reclining on a dark couch",w:640,h:427}
+  {file:"m46.jpg",cat:"lingerie",alt:"Kayla Rockett in a magenta lingerie set with body chain reclining on a dark couch",w:640,h:427},
+  {file:"hba-03.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a pink lace Honey Birdette lingerie set, reclining",w:524,h:640},
+  {file:"hba-04.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a blush Honey Birdette lingerie set",w:512,h:640},
+  {file:"hba-05.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a light pink Honey Birdette lingerie set",w:506,h:640},
+  {file:"hba-06.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a black Honey Birdette lingerie set on an orange lounge",w:512,h:640},
+  {file:"hba-09.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a green and gold Honey Birdette lingerie set",w:426,h:640},
+  {file:"hba-10.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a green and gold Honey Birdette lingerie set",w:426,h:640},
+  {file:"hba-11.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a green and gold Honey Birdette lingerie set, rear view",w:426,h:640},
+  {file:"hba-13.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a black Honey Birdette lingerie set with thigh-high boots",w:508,h:640},
+  {file:"hba-14.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a black Honey Birdette lingerie set with thigh-high boots",w:487,h:640},
+  {file:"hba-16.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a black Honey Birdette lingerie set with thigh-high boots",w:494,h:640},
+  {file:"hba-17.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a black Honey Birdette lingerie set with thigh-high boots, rear view",w:497,h:640},
+  {file:"hba-19.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a cream Honey Birdette lingerie set",w:579,h:640},
+  {file:"hba-21.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a purple Honey Birdette lingerie set",w:640,h:640},
+  {file:"hba-22.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a black Honey Birdette lingerie set in a modern kitchen",w:512,h:640}
 ];
 
 /* ---- Gallery render ---- */
