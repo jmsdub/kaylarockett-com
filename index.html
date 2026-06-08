@@ -348,6 +348,17 @@ nav.links a,.copy,.book-meta,.sec-head p{font-family:"Jost",sans-serif}
 .hb-lp-grid img{display:block;width:100%;aspect-ratio:2/3;object-fit:cover;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
 .hb-lp-grid a:hover img{transform:scale(1.04)}
 .hb-round-note{margin-top:20px;color:var(--muted);font-size:13px;letter-spacing:.03em}
+.hb-next{margin-top:30px}
+.hb-next h3{font-size:1.05rem;font-weight:600;margin:0 0 14px;color:var(--muted)}
+.hb-rounds{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.hb-rcard{background:var(--surface,#141416);border:1px solid var(--line);border-radius:12px;padding:18px 14px;text-align:center}
+.hb-rcard.on{border-color:#ff3d86}
+.hb-swatch{width:38px;height:38px;border-radius:50%;margin:0 auto 10px;border:2px solid rgba(255,255,255,.22)}
+.hb-rcard .rn{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.hb-rcard .nm{font-weight:600;font-size:15px;margin:3px 0 8px}
+.hb-rcard .st{font-size:9px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+.hb-rcard.on .st{color:#ff5fa0}
+@media(max-width:620px){.hb-rounds{grid-template-columns:repeat(2,1fr)}}
 .hb-round-note a{color:#ff5fa0;text-decoration:none;font-weight:600}
 @media(max-width:900px){.hb-lp-grid{grid-template-columns:repeat(4,1fr)}}
 @media(max-width:560px){.hb-lp-grid{grid-template-columns:repeat(3,1fr);gap:8px}}
@@ -459,6 +470,16 @@ nav.links a,.copy,.book-meta,.sec-head p{font-family:"Jost",sans-serif}
         <a href="https://contest.kaylarockett.com" target="_blank" rel="noopener"><img src="images/hb-lp-10.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
         <a href="https://contest.kaylarockett.com" target="_blank" rel="noopener"><img src="images/hb-lp-11.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
         <a href="https://contest.kaylarockett.com" target="_blank" rel="noopener"><img src="images/hb-lp-12.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
+      </div>
+      <div class="hb-next">
+        <h3>Coming next</h3>
+        <div class="hb-rounds">
+          <div class="hb-rcard on"><div class="hb-swatch" style="background:#f3b8d0"></div><div class="rn">Round 1</div><div class="nm">Light pink</div><div class="st">Live now</div></div>
+          <div class="hb-rcard"><div class="hb-swatch" style="background:#2f7fc9"></div><div class="rn">Next</div><div class="nm">Blue</div><div class="st">Unlocks soon</div></div>
+          <div class="hb-rcard"><div class="hb-swatch" style="background:#d8324f"></div><div class="rn">Next</div><div class="nm">Red</div><div class="st">Unlocks soon</div></div>
+          <div class="hb-rcard"><div class="hb-swatch" style="background:linear-gradient(135deg,#b07a35,#5e3d1c)"></div><div class="rn">Next</div><div class="nm">Leopard</div><div class="st">Unlocks soon</div></div>
+          <div class="hb-rcard"><div class="hb-swatch" style="background:#1c1c1f"></div><div class="rn">Next</div><div class="nm">Black</div><div class="st">Unlocks soon</div></div>
+        </div>
       </div>
       <p class="hb-round-note">A new set drops every round. <a href="https://contest.kaylarockett.com" target="_blank" rel="noopener">Cast your free daily vote &rarr;</a></p>
     </div>
