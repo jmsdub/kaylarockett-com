@@ -792,7 +792,7 @@ function applyHashFilter(){
   const p=document.getElementById('portfolio');
   if(p)p.scrollIntoView();
 }
-applyHashFilter();
+setTimeout(applyHashFilter,80);
 window.addEventListener('hashchange',applyHashFilter);
 
 /* ---- Lightbox ---- */
