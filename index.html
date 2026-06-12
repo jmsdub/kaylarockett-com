@@ -789,10 +789,17 @@ function applyHashFilter(){
   if(!b)return;
   document.querySelectorAll('.filter').forEach(f=>f.classList.remove('active'));
   b.classList.add('active');curCat=cat;renderAll();
+  scrollToPortfolio();
+}
+function scrollToPortfolio(){
   const p=document.getElementById('portfolio');
-  if(p)p.scrollIntoView();
+  if(p)p.scrollIntoView({behavior:'instant',block:'start'});
 }
 setTimeout(applyHashFilter,80);
+window.addEventListener('load',()=>{
+  const cat=(location.hash||'').slice(1);
+  if(cat&&document.querySelector('.filter[data-cat="'+cat+'"]'))scrollToPortfolio();
+});
 window.addEventListener('hashchange',applyHashFilter);
 
 /* ---- Lightbox ---- */
