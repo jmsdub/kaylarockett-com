@@ -782,6 +782,19 @@ moreToggle.addEventListener('click',()=>{
   syncMore();
 });
 
+/* Deep link: #lingerie, #swimwear, #honey-birdette etc. select that filter */
+function applyHashFilter(){
+  const cat=(location.hash||'').slice(1);
+  const b=document.querySelector('.filter[data-cat="'+cat+'"]');
+  if(!b)return;
+  document.querySelectorAll('.filter').forEach(f=>f.classList.remove('active'));
+  b.classList.add('active');curCat=cat;renderAll();
+  const p=document.getElementById('portfolio');
+  if(p)p.scrollIntoView();
+}
+applyHashFilter();
+window.addEventListener('hashchange',applyHashFilter);
+
 /* ---- Lightbox ---- */
 const lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg'),lbCount=document.getElementById('lbCount');
 let lbi=0,lbList=[];
