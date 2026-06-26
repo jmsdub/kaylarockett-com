@@ -398,12 +398,6 @@ nav.links a,.copy,.book-meta,.sec-head p{font-family:"Jost",sans-serif}
 .hb-sched-photo img[src*="contest-02"]{transform:scale(1.2);transform-origin:50% 15%}
 .hb-sched-photo img[src*="contest-03"]{object-position:50% 50%}
 .hb-sched-photo img[src*="contest-05"]{object-position:50% 20%;transform:scale(1.2);transform-origin:50% 20%}
-/* Lightbox */
-#lb{position:fixed;inset:0;background:rgba(0,0,0,.93);display:flex;align-items:center;justify-content:center;z-index:9999;cursor:pointer}
-#lb[hidden]{display:none}
-#lb-img{max-width:92vw;max-height:92vh;object-fit:contain;cursor:default;pointer-events:none;display:block}
-#lb-x{position:absolute;top:16px;right:20px;background:none;border:none;color:#fff;font-size:28px;cursor:pointer;opacity:.55;line-height:1;padding:8px}
-#lb-x:hover{opacity:1}
 .hb-sched-block .hb-rcard{display:flex;flex-direction:column;justify-content:center}
 @media(max-width:620px){
   .hb-sched-block{grid-template-columns:1fr 1fr;grid-auto-flow:column;grid-template-rows:repeat(5,auto);align-items:stretch;gap:10px}
@@ -906,20 +900,18 @@ renderAll();
 <script>
 (function(){
   document.documentElement.style.scrollBehavior='smooth';
-  /* Lightbox */
-  var lb=document.createElement('div');lb.id='lb';lb.hidden=true;
-  lb.innerHTML='<button id="lb-x" aria-label="Close">&#x2715;</button><img id="lb-img" alt="">';
-  document.body.appendChild(lb);
-  var lbI=document.getElementById('lb-img'),lbX=document.getElementById('lb-x');
-  function lbOpen(src){lbI.src=src;lb.hidden=false;document.body.style.overflow='hidden';}
-  function lbClose(){lb.hidden=true;document.body.style.overflow='';}
-  lb.addEventListener('click',function(e){if(e.target!==lbI)lbClose();});
-  lbX.addEventListener('click',function(e){e.stopPropagation();lbClose();});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')lbClose();});
-  /* Gallery photos → lightbox */
-  document.querySelectorAll('.hb-round .hb-lp-grid figure,.hb-round .hb-lp-grid a').forEach(function(el){
-    el.style.cursor='zoom-in';
-    el.addEventListener('click',function(e){e.preventDefault();lbOpen(el.querySelector('img').src);});
+  /* HB gallery photos → existing site lightbox */
+  document.querySelectorAll('.hb-round').forEach(function(round){
+    var els=Array.from(round.querySelectorAll('.hb-lp-grid figure,.hb-lp-grid a'));
+    var list=els.map(function(el){
+      var img=el.querySelector('img');
+      var src=img?img.getAttribute('src'):'';
+      return {file:src.replace(/^images\//,'').replace(/\?.*/,''),alt:img?img.alt||'Kayla Rockett':''};
+    });
+    els.forEach(function(el,idx){
+      el.style.cursor='zoom-in';
+      el.addEventListener('click',function(e){e.preventDefault();if(typeof openLB==='function')openLB(list,idx);});
+    });
   });
   /* Schedule heroes → scroll + expand gallery */
   document.querySelectorAll('a.hb-sched-photo').forEach(function(a){
