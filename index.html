@@ -301,7 +301,6 @@ h1,h2,h3,.about-body h2,.book-email,.foot-brand{font-family:"Bodoni Moda",Georgi
 .hero-bg::after{background:linear-gradient(0deg,rgba(0,0,0,.97) 0%,rgba(0,0,0,.76) 22%,rgba(0,0,0,.17) 48%,rgba(0,0,0,.04) 70%,rgba(0,0,0,.56) 100%)}
 .btn{border-radius:0;letter-spacing:.18em;font-family:"Jost",sans-serif}
 .btn-gold{background:var(--text);color:#0b0b0b}
-.btn-gold.btn-sparkle{background:linear-gradient(135deg,#e9cb82,#c29a45);color:#17120a}
 .btn-gold:hover{background:var(--gold);color:#0b0b0b}
 .btn-ghost{border-color:rgba(244,239,231,.5);color:var(--text)}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
@@ -329,146 +328,35 @@ nav.links a,.copy,.book-meta,.sec-head p{font-family:"Jost",sans-serif}
 .hero .eyebrow{font-size:13px}
 }
 
-/* ===== Hero Vote banner ===== */
-.hero-vote{display:inline-flex;align-items:center;gap:10px;margin-bottom:20px;padding:7px 15px 7px 7px;border:1px solid rgba(217,179,112,.5);background:rgba(217,179,112,.13);border-radius:4px;position:relative;overflow:hidden;isolation:isolate;transition:.25s;max-width:100%;width:fit-content}
-.hero-vote:hover{border-color:#d9b370;background:rgba(217,179,112,.22);transform:translateY(-1px)}
-.hv-badge{flex:none;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#17120a;background:#d9b370;padding:5px 11px;border-radius:3px;font-family:"Jost",sans-serif}
-.hv-text{font-size:13px;letter-spacing:.04em;color:#fff;font-weight:500;font-family:"Jost",sans-serif;text-shadow:0 1px 8px rgba(0,0,0,.8)}
-.hv-arrow{flex:none;color:#ff8fbe;font-weight:700;font-size:16px}
-.hero-vote::before{content:"";position:absolute;top:-30%;left:-160%;width:55%;height:160%;z-index:-1;pointer-events:none;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55) 50%,transparent);transform:skewX(-18deg);animation:cta-shimmer 3.6s ease-in-out infinite}
-.hero-vote::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:radial-gradient(circle at 24% 34%,#fff 0,rgba(255,255,255,.9) .9px,transparent 1.8px),radial-gradient(circle at 66% 28%,#fff 0,rgba(255,255,255,.85) .9px,transparent 1.6px),radial-gradient(circle at 90% 66%,#fff 0,rgba(255,255,255,.9) 1px,transparent 1.9px);animation:cta-sparkle 2.6s ease-in-out infinite}
-@media(max-width:520px){.hv-text{font-size:11.5px}.hero-vote{gap:8px;padding:6px 12px 6px 6px}.hv-badge{padding:4px 9px;font-size:10px}}
-@media (prefers-reduced-motion:reduce){.hero-vote::before,.hero-vote::after{animation:none;opacity:.001}}
-/* ===== Playboy x Honey Birdette contest section ===== */
-.nav-vote{color:#ff5fa0!important;font-weight:700!important}
-.nav-vote:hover{color:#ff8fbe!important}
-.contest{background:linear-gradient(180deg,#141416 0%,#0d0d0f 100%);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.contest .contest-head{max-width:760px;margin-bottom:46px}
-.contest h2{font-size:clamp(2.1rem,5vw,3.6rem)}
-.contest h2 em{font-style:italic;color:#ff5fa0;font-weight:inherit}
-.contest .contest-head>p{color:var(--muted);margin-top:18px;font-size:17px;max-width:64ch}
-.contest-cta{display:flex;align-items:center;gap:22px;margin-top:30px;flex-wrap:wrap}
-.contest-note{color:var(--muted);font-size:13px;letter-spacing:.03em}
-.entry-link{color:var(--muted);font-size:13.5px;letter-spacing:.03em;text-decoration:none;
   border-bottom:1px solid rgba(217,179,112,.32);padding-bottom:2px;transition:.2s}
-.entry-link:hover{color:var(--gold);border-bottom-color:var(--gold)}
 /* Note + shoot films, side by side. The note alone sat narrow with dead space
    beside it, so the reel and the two shoot clips fill that column. */
-.judges-block{display:grid;grid-template-columns:1.08fr .92fr;gap:38px;align-items:stretch;margin:0 0 46px}
 /* The letter is the one piece of writing aimed at five specific people, so it
    gets the gold treatment rather than sitting in the same grey as body copy. */
-.judges-note{padding:38px 42px;border-radius:4px;display:flex;flex-direction:column;justify-content:center;
   background:linear-gradient(158deg,rgba(217,179,112,.10) 0%,rgba(217,179,112,.03) 46%,rgba(26,26,29,.6) 100%);
   border:1px solid rgba(217,179,112,.34);
   box-shadow:0 0 0 1px rgba(217,179,112,.06) inset,0 18px 50px rgba(0,0,0,.34)}
-.judges-note .eyebrow{margin-bottom:14px;color:var(--gold)}
-.judges-note h3{font-size:clamp(1.25rem,2.6vw,1.75rem);margin-bottom:20px;
   color:#f0dcb4;font-style:italic;font-weight:500}
-.judges-note p{color:#cfc3ad;font-size:15.5px;line-height:1.68}
-.judges-note p b{color:#f0dcb4;font-weight:600}
-.judges-note p+p{margin-top:15px}
-.judges-sign{margin-top:24px!important;color:#e8d5ae!important}
-.judges-sign span{font-family:"Alex Brush",cursive;font-size:2.5rem;color:var(--gold);margin-left:10px;line-height:1;vertical-align:-8px}
-.shoot-films{display:flex;flex-direction:column;gap:14px}
-.films-label{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:0 0 2px}
-.film{position:relative;margin:0;background:#000;border:1px solid var(--line);border-radius:4px;overflow:hidden}
-.film video{display:block;width:100%;object-fit:cover;background:#000}
-.film-lead video,.film-wide video{aspect-ratio:960/780}
-.film-tall video{aspect-ratio:1080/1920}
 /* Column widths are weighted to the clips' own aspect ratios (1.231 landscape,
    0.562 portrait) so both tiles come out exactly the same height with no
    cropping — the vertical Vegas clip keeps its full frame. */
-.film-row{display:grid;grid-template-columns:1.231fr .562fr;gap:14px;align-items:start}
-.film-play{position:absolute;inset:0;width:100%;border:0;cursor:pointer;display:flex;flex-direction:column;
   align-items:center;justify-content:center;gap:12px;background:linear-gradient(0deg,rgba(0,0,0,.5),rgba(0,0,0,.12));
   color:#fff;font-family:"Jost",sans-serif;transition:background .25s}
-.film-play:hover{background:linear-gradient(0deg,rgba(0,0,0,.42),rgba(0,0,0,.06))}
-.film-play.gone{display:none}
-.fp-icon{width:60px;height:60px;border-radius:50%;background:rgba(255,61,134,.94);display:flex;align-items:center;
   justify-content:center;font-size:19px;padding-left:4px;transition:transform .2s}
-.film-play:hover .fp-icon{transform:scale(1.07)}
-.film-row .fp-icon{width:42px;height:42px;font-size:14px}
-.fp-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;text-shadow:0 1px 5px rgba(0,0,0,.7)}
 @media (max-width:900px){
-  .judges-block{grid-template-columns:1fr;gap:26px}
-  .shoot-films{max-width:620px}
 }
 @media (max-width:640px){
-  .judges-note{padding:26px 22px}
-  .judges-note p{font-size:15px}
-  .judges-sign span{font-size:2.1rem}
-  .film-row{gap:10px}
 }
-.contest-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
-.contest-grid a{display:block;position:relative;overflow:hidden;background:#000;border:1px solid var(--line);transition:border-color .3s}
-.contest-grid img{display:block;width:100%;aspect-ratio:2/3;object-fit:cover;object-position:50% 0;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
-.contest-grid a:hover{border-color:#ff5fa0}
-.contest-grid a:hover img{transform:scale(1.05)}
-.contest-grid .tag{position:absolute;left:0;bottom:0;width:100%;padding:16px 14px 12px;background:linear-gradient(0deg,rgba(0,0,0,.72),transparent);color:#fff;font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;opacity:0;transform:translateY(6px);transition:.3s}
-.contest-grid a:hover .tag{opacity:1;transform:none}
-@media(max-width:760px){.contest-grid{grid-template-columns:repeat(2,1fr);gap:12px}}
-.hb-round{margin-top:34px;border-top:1px solid var(--line);padding-top:30px}
-.hb-round-head{display:flex;align-items:center;gap:14px;margin-bottom:18px}
-.hb-round-head h3{font-size:clamp(1.1rem,2.6vw,1.55rem);font-weight:600;letter-spacing:.01em;white-space:nowrap}
-.hb-live{font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;background:#ff3d86;color:#0b0b0c;padding:4px 11px;border-radius:999px}
-.hb-round-head::after{content:"";flex:1;height:1px;background:var(--line)}
-.hb-lp-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
-.lp-toggle{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
-.hb-lp-grid .lp-extra{display:none}
-.lp-toggle:checked~.hb-lp-grid .lp-extra{display:block}
-.lp-more{display:flex;align-items:center;gap:8px;width:fit-content;margin:20px auto 0;cursor:pointer;padding:11px 26px;border:1px solid var(--line);border-radius:999px;color:var(--text);background:rgba(255,255,255,.03);font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;transition:border-color .25s,color .25s}
-.lp-more:hover{border-color:#ff5fa0;color:#ff5fa0}
-.lp-more-hide{display:none}
-.lp-toggle:checked~.lp-more .lp-more-show{display:none}
-.lp-toggle:checked~.lp-more .lp-more-hide{display:inline}
-.hb-lp-grid a{display:block;position:relative;overflow:hidden;background:#000;border:1px solid var(--line);transition:border-color .3s}
-.hb-lp-grid a:hover{border-color:#ff5fa0}
-.hb-lp-grid img{display:block;width:100%;aspect-ratio:2/3;object-fit:cover;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
-.hb-lp-grid a:hover img{transform:scale(1.04)}
-.hb-round-note{margin-top:20px;color:var(--muted);font-size:13px;letter-spacing:.03em}
 .hb-next{margin-top:30px}
 .hb-next h3{font-size:1.05rem;font-weight:600;margin:0 0 14px;color:var(--muted)}
-.hb-rounds{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
-.hb-rcard{background:var(--surface,#141416);border:1px solid var(--line);border-radius:12px;padding:18px 14px;text-align:center}
-.hb-rcard.on{border-color:#ff3d86}
-.hb-swatch{width:38px;height:38px;border-radius:50%;margin:0 auto 10px;border:2px solid rgba(255,255,255,.22)}
-.hb-rcard .rn{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
-.hb-rcard .nm{font-weight:600;font-size:15px;margin:3px 0 8px}
-.hb-rcard .st{font-size:9px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--muted)}
-.hb-rcard.on .st{color:#ff5fa0}
 @media(max-width:620px){.hb-rounds{grid-template-columns:repeat(2,1fr)}}
-.hb-round-note a{color:#d9b370;text-decoration:none;font-weight:600}
-.hb-series-head{display:flex;align-items:center;gap:14px;margin:40px 0 18px}
-.hb-series-head h3{font-size:clamp(1.1rem,2.6vw,1.55rem);font-weight:600;white-space:nowrap;margin:0}
-.hb-series-head::after{content:"";flex:1;height:1px;background:var(--line)}
-.hb-rcard .dt{font-size:14px;font-weight:700;color:var(--text);margin:4px 0 8px;letter-spacing:.02em}
 @media(max-width:760px){
-  .hb-lp-grid{grid-template-columns:repeat(2,1fr);gap:12px}
-  .hb-lp-grid > :nth-child(1){display:none}
-  .lp-toggle:checked ~ .hb-lp-grid > :nth-child(1){display:block}
 }
 /* ===== HB series combined schedule + photos block ===== */
-.hb-sched-block{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
-.hb-sched-photo{margin:0;display:block;text-decoration:none;aspect-ratio:2/3;align-self:start;background:#000;overflow:hidden;border:1px solid var(--line);transition:border-color .25s,transform .25s}
-.hb-sched-photo:hover{border-color:#ff5fa0;transform:translateY(-2px)}
-.hb-sched-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 0}
-.hb-sched-photo img[src*="contest-02"]{transform:scale(1.25);transform-origin:50% 41%}
-.hb-sched-photo img[src*="contest-03"]{transform:scale(1.15);transform-origin:50% 25%}
-.hb-sched-photo img[src*="contest-04"]{transform:scale(1.1);transform-origin:50% 33%}
-.hb-sched-photo img[src*="contest-05"]{transform:scale(1.25);transform-origin:50% 43%}
-.hb-sched-block .hb-rcard{display:flex;flex-direction:column;justify-content:center}
 @media(max-width:620px){
-  .hb-sched-block{grid-template-columns:1fr 1fr;grid-auto-flow:column;grid-template-rows:repeat(5,auto);align-items:stretch;gap:10px}
-  .hb-sched-block .hb-sched-photo{order:2}
-  .hb-sched-block .hb-rcard{order:1}
 }
 
-/* ===== Vote for Kayla sparkle ===== */
-.btn-sparkle{position:relative;overflow:hidden;isolation:isolate;background:linear-gradient(135deg,#eccf8e,#d9b370 45%,#bd923f)!important;color:#1a1205!important}
-.btn-sparkle:hover{background:linear-gradient(135deg,#f1d79c,#e1bd7c 45%,#c79a44)!important;color:#1a1205!important;transform:translateY(-2px)}
-.btn-sparkle::before{content:"";position:absolute;top:-25%;left:-160%;width:55%;height:150%;z-index:-1;pointer-events:none;background:linear-gradient(100deg,transparent,rgba(255,255,255,.92) 50%,transparent);transform:skewX(-18deg);animation:cta-shimmer 3.6s ease-in-out infinite}
 @keyframes cta-shimmer{0%,10%{left:-160%}50%{left:175%}100%{left:175%}}
-.btn-sparkle::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:radial-gradient(circle at 16% 30%,#fff 0,rgba(255,255,255,.95) 1px,transparent 2.2px),radial-gradient(circle at 73% 22%,#fff 0,rgba(255,255,255,.9) 1px,transparent 2px),radial-gradient(circle at 40% 76%,#fff 0,rgba(255,255,255,.9) 1px,transparent 2px),radial-gradient(circle at 90% 64%,#fff 0,rgba(255,255,255,.95) 1.4px,transparent 2.4px),radial-gradient(circle at 57% 46%,#fff 0,rgba(255,255,255,.85) .9px,transparent 1.8px);animation:cta-sparkle 2.6s ease-in-out infinite}
 @keyframes cta-sparkle{0%,100%{opacity:.12}22%{opacity:1}44%{opacity:.25}68%{opacity:.85}}
 @media (prefers-reduced-motion:reduce){.btn-sparkle::before,.btn-sparkle::after{animation:none;opacity:.001}}
 </style>
@@ -506,7 +394,6 @@ nav.links a,.copy,.book-meta,.sec-head p{font-family:"Jost",sans-serif}
   <a href="#top" class="brand">Kayla<span>·</span>Rockett</a>
   <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
   <nav class="links" id="navLinks">
-    <a href="#contest" class="nav-vote">The Final</a>
     <a href="#about">About</a>
     <a href="#stats">Stats</a>
     <a href="#portfolio">Portfolio</a>
@@ -522,11 +409,6 @@ nav.links a,.copy,.book-meta,.sec-head p{font-family:"Jost",sans-serif}
   <div class="hero-bg"><img id="heroImg" src="images/hero.jpg?v=2" srcset="images/hero-sm.jpg?v=2 1200w, images/hero.jpg?v=2 2600w" sizes="100vw" fetchpriority="high" alt="Kayla Rockett, Las Vegas swimwear and lingerie model" width="2600" height="1733" /></div>
   <div class="hero-inner">
     <div class="wrap">
-      <a href="#contest" class="hero-vote" aria-label="Kayla is through to the Final of the Playboy and Honey Birdette search">
-        <span class="hv-badge">Finalist</span>
-        <span class="hv-text">Through to the Final &#183; Playboy &#215; Honey Birdette</span>
-        <span class="hv-arrow" aria-hidden="true">&rarr;</span>
-      </a>
       <p class="eyebrow">Las Vegas based</p>
       <h1>KAYLA<br>ROCKETT</h1>
       <p class="sub">Swimwear, lingerie &amp; fashion model. <b>Available for campaigns, editorial, appearances &amp; hosting.</b></p>
@@ -534,204 +416,6 @@ nav.links a,.copy,.book-meta,.sec-head p{font-family:"Jost",sans-serif}
         <a href="mailto:contact@kaylarockett.com?subject=Booking%20inquiry%20for%20Kayla%20Rockett" class="btn btn-gold">Book Kayla</a>
         <a href="#portfolio" class="btn btn-ghost">View portfolio</a>
       <a class="btn btn-ig" href="https://www.instagram.com/kaylarocketts_world/" target="_blank" rel="noopener noreferrer"><svg class="ig-ico" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><rect x="2.2" y="2.2" width="19.6" height="19.6" rx="5.6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.7" cy="6.3" r="1.4" fill="currentColor"/></svg><span>@kaylarocketts_world</span></a></div>
-    </div>
-  </div>
-</section>
-
-<section id="contest" class="contest">
-  <div class="wrap">
-    <div class="contest-head reveal">
-      <p class="eyebrow">Playboy &#215; Honey Birdette</p>
-      <h2>Kayla is in the <em>Final</em></h2>
-      <p>I&#39;m one of 100 finalists for the face of the exclusive Playboy &#215; Honey Birdette Collection, a global model search. Public voting ran June 8 to July 28 and I won every round of it, thanks to the people who kept showing up. <b>The Final is decided by a judging panel, so voting is now closed.</b> These are selects from the May 2026 shoot.</p>
-      <div class="contest-cta">
-        <a href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener" class="entry-link">See her contest entry on Orbiiit &rarr;</a>
-        <span class="contest-note">Public voting closed July 28 &middot; the Final is judged</span>
-      </div>
-    </div>
-
-    <div class="judges-block reveal">
-      <div class="judges-note">
-        <p class="eyebrow">A note to the judges</p>
-        <h3>Thank you for the chance to stand in front of you</h3>
-        <p>This is a dream come true. I have loved Honey Birdette for years, long before any of this. I bought the pieces myself and shot five sets with photographers I trust, because their look is exactly the kind of work I want to be known for. Playboy has meant even more to me for even longer. Getting the chance to actually be considered for their collection still does not feel real. I do not take a single part of it for granted, and modeling is the thing I have worked hardest for.</p>
-        <p>Getting to the final 100 meant going through round after round of public voting, and it was never easy. Every round asked for more than the last, and there were plenty of moments I did not know if I would make it to the next one. I did, every time, and now I get to stand in front of you instead of a vote count, which feels like the fairest way this could end.</p>
-        <p>I am based in Las Vegas and I travel easily for work, so wherever this goes next, I am ready.</p>
-        <p>Thank you for taking the time to consider me. It means more than I can put into words.</p>
-        <p class="judges-sign">With gratitude, <span>Kayla</span></p>
-      </div>
-
-      <div class="shoot-films">
-        <p class="films-label">From the May 2026 shoot</p>
-        <figure class="film film-lead">
-          <video preload="none" playsinline poster="video/reel-poster.jpg" aria-label="Behind the scenes reel from the May 2026 Honey Birdette shoot">
-            <source src="video/reel.mp4" type="video/mp4" />
-          </video>
-          <button class="film-play" type="button" aria-label="Play the behind the scenes reel">
-            <span class="fp-icon">&#9654;</span>
-            <span class="fp-label">Behind the scenes &middot; 0:34</span>
-          </button>
-        </figure>
-        <div class="film-row">
-          <figure class="film film-wide">
-            <video preload="none" playsinline poster="video/clip-1-poster.jpg" aria-label="Shoot clip from the May 2026 Honey Birdette shoot">
-              <source src="video/clip-1.mp4" type="video/mp4" />
-            </video>
-            <button class="film-play" type="button" aria-label="Play shoot clip"><span class="fp-icon">&#9654;</span></button>
-          </figure>
-          <figure class="film film-tall">
-            <video preload="none" playsinline poster="video/clip-2-poster.jpg" aria-label="Vertical shoot clip from the May 2026 Honey Birdette shoot, Las Vegas">
-              <source src="video/clip-2.mp4" type="video/mp4" />
-            </video>
-            <button class="film-play" type="button" aria-label="Play vertical shoot clip"><span class="fp-icon">&#9654;</span></button>
-          </figure>
-        </div>
-      </div>
-    </div>
-
-    <div class="hb-series-head"><h3>Honey Birdette &times; Playboy Series</h3></div>
-    <div class="hb-sched-block reveal">
-      <a class="hb-sched-photo" href="#hb-round-1"><img src="images/contest-01.jpg?v=4" alt="Kayla Rockett in a pink satin Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-      <a class="hb-sched-photo" href="#hb-round-2"><img src="images/contest-02.jpg?v=4" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-      <a class="hb-sched-photo" href="#hb-round-3"><img src="images/contest-03.jpg?v=4" alt="Kayla Rockett in a leopard-print Honey Birdette set" loading="lazy" decoding="async" width="600" height="900" /></a>
-      <a class="hb-sched-photo" href="#hb-round-4"><img src="images/hb-hp-01.jpg" alt="Kayla Rockett in a hot pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-      <a class="hb-sched-photo" href="#hb-round-5"><img src="images/hb-black-01.jpg" alt="Kayla Rockett in a black Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-      <div class="hb-rcard on"><div class="hb-swatch" style="background:#f3b8d0"></div><div class="rn">Group round 1</div><div class="nm">Light pink</div><div class="dt">Jun 8</div><div class="st">Complete</div></div>
-      <div class="hb-rcard"><div class="hb-swatch" style="background:#2f7fc9"></div><div class="rn">Group round 2</div><div class="nm">Blue</div><div class="dt">Jun 19</div><div class="st">Complete</div></div>
-      <div class="hb-rcard"><div class="hb-swatch" style="background:linear-gradient(135deg,#b07a35,#5e3d1c)"></div><div class="rn">Group round 3</div><div class="nm">Leopard</div><div class="dt">Jun 26</div><div class="st">Complete</div></div>
-      <div class="hb-rcard"><div class="hb-swatch" style="background:#ff2d72"></div><div class="rn">Group round 4</div><div class="nm">Hot pink</div><div class="dt">Jun 30</div><div class="st">Complete</div></div>
-      <div class="hb-rcard"><div class="hb-swatch" style="background:#1c1c1f"></div><div class="rn">Group finals</div><div class="nm">Black</div><div class="dt">Jul 6</div><div class="st">Complete</div></div>
-    </div>
-    <div class="hb-round reveal" id="hb-round-5">
-      <div class="hb-round-head"><h3>Group Finals &middot; Black</h3><span class="hb-live" style="background:rgba(255,255,255,.08);color:#9a96a0">Out now</span></div>
-      <input type="checkbox" id="lpToggleBlack" class="lp-toggle">
-      <div class="hb-lp-grid">
-        <a href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-black-01.jpg" alt="Kayla Rockett in a black Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-black-02.jpg" alt="Kayla Rockett in a black Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-black-03.jpg" alt="Kayla Rockett in a black Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-black-04.jpg" alt="Kayla Rockett in a black Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-black-05.jpg" alt="Kayla Rockett in a black Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-black-06.jpg" alt="Kayla Rockett in a black Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-black-07.jpg" alt="Kayla Rockett in a black Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-black-08.jpg" alt="Kayla Rockett in a black Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-black-09.jpg" alt="Kayla Rockett in a black Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-black-10.jpg" alt="Kayla Rockett in a black Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-black-11.jpg" alt="Kayla Rockett in a black Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-black-12.jpg" alt="Kayla Rockett in a black Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-black-13.jpg" alt="Kayla Rockett in a black Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-black-14.jpg" alt="Kayla Rockett in a black Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-      </div>
-      <label for="lpToggleBlack" class="lp-more"><span class="lp-more-show">Show all 14 photos &darr;</span><span class="lp-more-hide">Show less &uarr;</span></label>
-      <p class="hb-round-note">Kayla won this round and went through to the Quarterfinal. <a href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener">See her entry on Orbiiit &rarr;</a></p>
-    </div>
-    <div class="hb-round reveal" id="hb-round-4">
-      <div class="hb-round-head"><h3>Round 4 &middot; Hot pink</h3><span class="hb-live" style="background:rgba(255,255,255,.08);color:#9a96a0">Out now</span></div>
-      <input type="checkbox" id="lpToggleHotPink" class="lp-toggle">
-      <div class="hb-lp-grid">
-        <a href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-hp-01.jpg" alt="Kayla Rockett in a hot pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-hp-02.jpg" alt="Kayla Rockett in a hot pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-hp-03.jpg" alt="Kayla Rockett in a hot pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-hp-04.jpg" alt="Kayla Rockett in a hot pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-hp-05.jpg" alt="Kayla Rockett in a hot pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-hp-06.jpg" alt="Kayla Rockett in a hot pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-hp-07.jpg" alt="Kayla Rockett in a hot pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-hp-08.jpg" alt="Kayla Rockett in a hot pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-hp-09.jpg" alt="Kayla Rockett in a hot pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-hp-10.jpg" alt="Kayla Rockett in a hot pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-hp-11.jpg" alt="Kayla Rockett in a hot pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-hp-12.jpg" alt="Kayla Rockett in a hot pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-      </div>
-      <label for="lpToggleHotPink" class="lp-more"><span class="lp-more-show">Show all 12 photos &darr;</span><span class="lp-more-hide">Show less &uarr;</span></label>
-      <p class="hb-round-note">Kayla finished top 5 in this round and advanced. <a href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener">See her entry on Orbiiit &rarr;</a></p>
-    </div>
-    <div class="hb-round reveal" id="hb-round-3">
-      <div class="hb-round-head"><h3>Round 3 &middot; Leopard</h3><span class="hb-live" style="background:rgba(255,255,255,.08);color:#9a96a0">Out now</span></div>
-      <input type="checkbox" id="lpToggleLeopard" class="lp-toggle">
-      <div class="hb-lp-grid">
-        <a href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-01.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-02.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-03.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-04.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-05.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-06.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-07.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-08.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-09.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-10.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-11.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-12.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-13.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-14.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-15.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-16.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-17.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-18.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-19.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-20.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-21.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-22.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-23.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-24.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-25.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-26.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-27.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-28.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-29.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-30.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-31.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-32.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-33.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-34.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-38.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-39.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-leopard-40.jpg" alt="Kayla Rockett in a leopard-print Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-      </div>
-      <label for="lpToggleLeopard" class="lp-more"><span class="lp-more-show">Show all 37 photos &darr;</span><span class="lp-more-hide">Show less &uarr;</span></label>
-    </div>
-    <div class="hb-round reveal" id="hb-round-2">
-      <div class="hb-round-head"><h3>Round 2 &middot; Blue</h3><span class="hb-live" style="background:rgba(255,255,255,.08);color:#9a96a0">Out now</span></div>
-      <input type="checkbox" id="lpToggle" class="lp-toggle">
-      <div class="hb-lp-grid">
-        <a href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-blue-01.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-blue-02.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-blue-03.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-blue-04.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-blue-05.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-blue-06.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-blue-07.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-blue-08.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-blue-09.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-blue-10.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-blue-11.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-blue-12.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-blue-13.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-blue-14.jpg" alt="Kayla Rockett in a blue Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-      </div>
-      <label for="lpToggle" class="lp-more"><span class="lp-more-show">Show all 14 photos &darr;</span><span class="lp-more-hide">Show less &uarr;</span></label>
-    </div>
-    <div class="hb-round reveal" id="hb-round-1">
-      <div class="hb-round-head"><h3>Round 1 &middot; Light pink</h3><span class="hb-live" style="background:rgba(255,255,255,.08);color:#9a96a0">Out now</span></div>
-      <input type="checkbox" id="lpTogglePink" class="lp-toggle">
-      <div class="hb-lp-grid">
-        <a href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-lp-01.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-lp-02.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-lp-03.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-lp-04.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-lp-05.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-lp-06.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-lp-07.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-lp-08.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-lp-09.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-lp-10.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-lp-11.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-lp-12.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-lp-13.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-lp-14.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-lp-15.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-        <a class="lp-extra" href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener"><img src="images/hb-lp-16.jpg" alt="Kayla Rockett in a light pink Honey Birdette lingerie set" loading="lazy" decoding="async" width="600" height="900" /></a>
-      </div>
-      <label for="lpTogglePink" class="lp-more"><span class="lp-more-show">Show all 16 photos &darr;</span><span class="lp-more-hide">Show less &uarr;</span></label>
-      <p class="hb-round-note">Kayla advanced through every voting round to reach the Final. <a href="https://orbiiit.com/en/participants/e37d533f-1cf0-4116-aa00-b1a9c1b3bfad?contestId=d663c28e-5396-4577-9c5d-2610a36322f8" target="_blank" rel="noopener">See her entry on Orbiiit &rarr;</a></p>
     </div>
   </div>
 </section>
@@ -902,7 +586,17 @@ const FEATURED = [
   {file:"hba-18.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a white Honey Birdette lingerie set",w:426,h:640},
   {file:"hba-20.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a lavender Honey Birdette lingerie set",w:640,h:634},
   {file:"hba-23.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a pink heart-cutout Honey Birdette bra and garter set with pink sunglasses, standing in a doorway",w:610,h:640},
-  {file:"hba-24.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a sheer neon orange embroidered Honey Birdette lingerie set with garter belt and stockings",w:560,h:640}
+  {file:"hba-24.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a sheer neon orange embroidered Honey Birdette lingerie set with garter belt and stockings",w:560,h:640},
+  {file:"hb-black-01.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a black Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-black-07.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a black Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-blue-01.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a blue metallic Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-blue-06.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a blue metallic Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-hp-01.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a hot pink Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-hp-04.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a hot pink Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-01.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-12.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-lp-01.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a light pink satin Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-lp-05.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a light pink satin Honey Birdette lingerie set, May 2026 shoot",w:426,h:640}
 ];
 const MORE = [
   {file:"m01.jpg",cat:"swimwear",alt:"Blonde model in a nude string bikini kneeling on the wet sand at the beach.",w:426,h:640},
@@ -963,7 +657,93 @@ const MORE = [
   {file:"hba-17.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a black Honey Birdette lingerie set with thigh-high boots, rear view",w:497,h:640},
   {file:"hba-19.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a cream Honey Birdette lingerie set",w:579,h:640},
   {file:"hba-21.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a purple Honey Birdette lingerie set",w:640,h:640},
-  {file:"hba-22.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a black Honey Birdette lingerie set in a modern kitchen",w:512,h:640}
+  {file:"hba-22.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a black Honey Birdette lingerie set in a modern kitchen",w:512,h:640},
+  {file:"hb-black-02.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a black Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-black-03.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a black Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-black-04.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a black Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-black-05.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a black Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-black-06.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a black Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-black-08.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a black Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-black-09.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a black Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-black-10.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a black Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-black-11.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a black Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-black-12.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a black Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-black-13.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a black Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-black-14.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a black Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-blue-02.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a blue metallic Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-blue-03.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a blue metallic Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-blue-04.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a blue metallic Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-blue-05.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a blue metallic Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-blue-07.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a blue metallic Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-blue-08.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a blue metallic Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-blue-09.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a blue metallic Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-blue-10.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a blue metallic Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-blue-11.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a blue metallic Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-blue-12.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a blue metallic Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-blue-13.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a blue metallic Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-blue-14.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a blue metallic Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-hp-02.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a hot pink Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-hp-03.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a hot pink Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-hp-05.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a hot pink Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-hp-06.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a hot pink Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-hp-07.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a hot pink Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-hp-08.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a hot pink Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-hp-09.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a hot pink Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-hp-10.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a hot pink Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-hp-11.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a hot pink Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-hp-12.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a hot pink Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-02.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-03.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-04.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-05.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-06.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-07.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-08.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-09.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-10.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-11.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-13.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-14.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-15.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:640,h:426},
+  {file:"hb-leopard-16.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-17.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-18.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-19.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-20.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-21.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-22.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-23.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-24.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-25.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-26.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:640,h:426},
+  {file:"hb-leopard-27.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-28.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-29.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-30.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-31.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-32.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-33.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-34.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-35.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-36.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-37.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-38.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-39.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-leopard-40.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a leopard-print Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-lp-02.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a light pink satin Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-lp-03.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a light pink satin Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-lp-04.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a light pink satin Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-lp-06.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a light pink satin Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-lp-07.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a light pink satin Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-lp-08.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a light pink satin Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-lp-09.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a light pink satin Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-lp-10.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a light pink satin Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-lp-11.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a light pink satin Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-lp-12.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a light pink satin Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-lp-13.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a light pink satin Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-lp-14.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a light pink satin Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-lp-15.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a light pink satin Honey Birdette lingerie set, May 2026 shoot",w:426,h:640},
+  {file:"hb-lp-16.jpg",cat:"honey-birdette",alt:"Kayla Rockett in a light pink satin Honey Birdette lingerie set, May 2026 shoot",w:426,h:640}
 ];
 
 /* ---- Gallery render ---- */
@@ -1060,58 +840,12 @@ document.getElementById('yr').textContent=new Date().getFullYear();
 renderAll();
 </script>
 <script>
-/* Series round-status auto-labelling (PT round timing) */
-(function(){
-  var R=[
-    {name:'Group round 1',start:'2026-06-08T14:00:00-07:00',end:'2026-06-19T13:00:00-07:00'},
-    {name:'Group round 2',start:'2026-06-19T14:00:00-07:00',end:'2026-06-26T13:00:00-07:00'},
-    {name:'Group round 3',start:'2026-06-26T14:00:00-07:00',end:'2026-06-30T13:00:00-07:00'},
-    {name:'Group round 4',start:'2026-06-30T14:00:00-07:00',end:'2026-07-06T13:00:00-07:00'},
-    {name:'Group finals', start:'2026-07-06T14:00:00-07:00',end:'2026-07-13T19:00:00-07:00'}
-  ];
-  var now=new Date();
-  document.querySelectorAll('.hb-rcard').forEach(function(el){
-    var rn=el.querySelector('.rn'),st=el.querySelector('.st');
-    if(!rn||!st)return;
-    var r=R.find(function(x){return x.name===rn.textContent.trim();});
-    if(!r)return;
-    var s=new Date(r.start),e=new Date(r.end);
-    el.classList.remove('on');
-    if(now>=s&&now<e){el.classList.add('on');st.textContent='Live now';}
-    else if(now>=e){st.textContent='Out now';}
-    else{st.textContent='Upcoming';}
-  });
-})();
+
 </script>
 <script>
-(function(){
-  /* Shoot films: poster until clicked, so nothing downloads on page load. */
-  document.querySelectorAll('.film').forEach(function(fig){
-    var v=fig.querySelector('video'), b=fig.querySelector('.film-play');
-    if(!v||!b) return;
-    b.addEventListener('click',function(){
-      b.classList.add('gone');
-      v.setAttribute('controls','');
-      v.play().catch(function(){ v.setAttribute('controls',''); });
-    });
-    v.addEventListener('ended',function(){ b.classList.remove('gone'); });
-  });
-})();
+
 (function(){
   document.documentElement.style.scrollBehavior='smooth';
-  /* HB gallery photos → existing site lightbox */
-  document.querySelectorAll('.hb-round').forEach(function(round){
-    var els=Array.from(round.querySelectorAll('.hb-lp-grid figure,.hb-lp-grid a'));
-    var list=els.map(function(el){
-      var img=el.querySelector('img');
-      var src=img?img.getAttribute('src'):'';
-      return {file:src.replace(/^images\//,'').replace(/\?.*/,''),alt:img?img.alt||'Kayla Rockett':''};
-    });
-    els.forEach(function(el,idx){
-      el.style.cursor='zoom-in';
-      el.addEventListener('click',function(e){e.preventDefault();if(typeof openLB==='function')openLB(list,idx);});
-    });
-  });
   /* Schedule heroes → scroll + expand gallery */
   document.querySelectorAll('a.hb-sched-photo').forEach(function(a){
     var href=a.getAttribute('href');
